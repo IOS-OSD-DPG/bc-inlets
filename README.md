@@ -20,9 +20,9 @@ Adding a new inlet should only require touching `index.html` and `figures/all-in
 2. Add a section to the end with the class `inlet-content`, with an identifier matching the one in the `onclick` property of the button.
 3. Add the name of the inlet to the section as a `h2` header.
 4. Add a physical description and a map of the inlet.
-5. Add the sampling history.
-6. Add two sections: one to hold the monthly average data, and the other to hold the raw data. Make sure the monthly average section has the classes `averaging-content` and `monthly`, and the raw data section has the classes `averaging-content` and `raw`.
-7. Add the monthly averaged temperature, salinity, and dissolved oxygen figures to the monthly averaged section, and the raw temperature, salinity, and dissolved oxygen figures to the raw section.
+5. Add two sections: one to hold the monthly average data, and the other to hold the raw data. Make sure the monthly average section has the classes `averaging-content` and `monthly`, and the raw data section has the classes `averaging-content` and `raw`.
+6. Add the monthly averaged temperature, salinity, and dissolved oxygen figures to the monthly averaged section, and the raw temperature, salinity, and dissolved oxygen figures to the raw section.
+7. Update the sampling history section in the `annual-averaging-content` div to include the new inlet's sampling history.
 8. Update `figures/all-inlets-map.png` to include the new inlet, and make sure the associated description is up to date as well.
 
 After all that, the new inlet should be viewable just like the others when its associated button is clicked.
