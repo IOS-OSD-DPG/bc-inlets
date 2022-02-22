@@ -27,6 +27,7 @@
 		<div id="averaging-choice" class="tab">
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'monthly')" id="averaging-default">Monthly Averages</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'raw')">Raw Data</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies</button>
 		</div>
 		<p id="monthly-description" class="averaging-content monthly">
 			Data is averaged inside individual depth buckets across a month. This produces a maximum of three data points per month, one for each bucket.
@@ -35,257 +36,264 @@
 		<p id="raw-description" class="averaging-content raw">
 			Data is not averaged. All data found is shown, coloured according to its depth.
 		</p>
+		<p id="annual-description" class="averaging-content annual">
+			Data is averaged annually and presented in a single plot for each data value.
+			Annomalies (deviation from the average) are calculated and plotted for each data value as well.
+			All inlets are shown in the same plot.
+			The average is calculated as the arithmetic mean of all data considered deep across a month.
+		</p>
 
-		<div id="inlet-choice" class="tab">
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'saanich-inlet')" id="inlet-default">Saanich Inlet</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'jervis-inlet')">Jervis Inlet</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'bute-inlet')">Bute Inlet</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'knight-inlet')">Knight Inlet</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'indian-arm')">Indian Arm</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'howe-sound')">Howe Sound</button>
-			<button class="inlet-tablinks" onclick="changeInlet(event, 'muchalat-inlet')">Muchalat Inlet</button>
+		<div class="averaging-content annual">
+			<h2>Annual Averages (All Inlets)</h2>
+			<h3>Temperature Averages</h3>
+			<img src="figures/deep-water-temperature-annual-averages.png" loading="lazy">
+			<h3>Salinity Averages</h3>
+			<img src="figures/deep-water-salinity-annual-averages.png" loading="lazy">
+			<h3>Dissolved Oxygen Averages</h3>
+			<img src="figures/deep-water-oxygen-annual-averages.png" loading="lazy">
+			<h2>Annual Anomalies (All Inlets)</h2>
+			<h3>Temperature Anomalies</h3>
+			<img src="figures/deep-water-temperature-anomalies.png" loading="lazy">
+			<h3>Salinity Anomalies</h3>
+			<img src="figures/deep-water-salinity-anomalies.png" loading="lazy">
+			<h3>Dissolved Oxygen Anomalies</h3>
+			<img src="figures/deep-water-oxygen-anomalies.png" loading="lazy">
 		</div>
 
-		<div id="saanich-inlet" class="inlet-content">
-			<h2>Saanich Inlet</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 24 km</li>
-				<li>Maximum depth: 255 m</li>
-				<li>Major basins: one</li>
-				<li>Sill depth: 70 m, located at the mouth</li>
-				<li>Surface area: 65 km<sup>2</sup></li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/saanich-inlet-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/saanich-inlet-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="saanich-inlet-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/saanich-inlet-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/saanich-inlet-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/saanich-inlet-oxygen-average.png" loading="lazy">
+		<div class="averaging-content monthly raw">
+			<div id="inlet-choice" class="tab">
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'saanich-inlet')" id="inlet-default">Saanich Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'jervis-inlet')">Jervis Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'bute-inlet')">Bute Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'knight-inlet')">Knight Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'indian-arm')">Indian Arm</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'howe-sound')">Howe Sound</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'muchalat-inlet')">Muchalat Inlet</button>
 			</div>
-			<div id="saanich-inlet-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/saanich-inlet-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/saanich-inlet-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/saanich-inlet-oxygen.png" loading="lazy">
-			</div>
-		</div>
 
-		<div id="jervis-inlet" class="inlet-content">
-			<h2>Jervis Inlet</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 89 km</li>
-				<li>Maximum depth: 670 m</li>
-				<li>Major basins: several</li>
-				<li>Sill depth: outer basin - 240 m, located at mouth of inlet; inner basin - 219 m, located near Patrick Point; Princess Louisa Inlet - 6 m</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/jervis-inlet-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/jervis-inlet-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="jervis-inlet-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/jervis-inlet-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/jervis-inlet-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/jervis-inlet-oxygen-average.png" loading="lazy">
+			<div id="saanich-inlet" class="inlet-content">
+				<h2>Saanich Inlet</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 24 km</li>
+					<li>Maximum depth: 255 m</li>
+					<li>Major basins: one</li>
+					<li>Sill depth: 70 m, located at the mouth</li>
+					<li>Surface area: 65 km<sup>2</sup></li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/saanich-inlet-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/saanich-inlet-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="saanich-inlet-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/saanich-inlet-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/saanich-inlet-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/saanich-inlet-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="saanich-inlet-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/saanich-inlet-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/saanich-inlet-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/saanich-inlet-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="jervis-inlet-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/jervis-inlet-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/jervis-inlet-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/jervis-inlet-oxygen.png" loading="lazy">
-			</div>
-		</div>
 
-		<div id="bute-inlet" class="inlet-content">
-			<h2>Bute Inlet</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 75 km</li>
-				<li>Maximum depth: 650 m</li>
-				<li>Major basins: one</li>
-				<li>Sill depth: 370 m, just outside the inlet in Calm Channel</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/bute-inlet-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/bute-inlet-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="bute-inlet-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/bute-inlet-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/bute-inlet-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/bute-inlet-oxygen-average.png" loading="lazy">
+			<div id="jervis-inlet" class="inlet-content">
+				<h2>Jervis Inlet</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 89 km</li>
+					<li>Maximum depth: 670 m</li>
+					<li>Major basins: several</li>
+					<li>Sill depth: outer basin - 240 m, located at mouth of inlet; inner basin - 219 m, located near Patrick Point; Princess Louisa Inlet - 6 m</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/jervis-inlet-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/jervis-inlet-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="jervis-inlet-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/jervis-inlet-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/jervis-inlet-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/jervis-inlet-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="jervis-inlet-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/jervis-inlet-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/jervis-inlet-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/jervis-inlet-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="bute-inlet-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/bute-inlet-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/bute-inlet-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/bute-inlet-oxygen.png" loading="lazy">
-			</div>
-		</div>
 
-		<div id="knight-inlet" class="inlet-content">
-			<h2>Knight Inlet</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 105 km</li>
-				<li>Maximum depth: 540 m</li>
-				<li>Major basins: main, deep inner basin; smaller and shallower outer basin</li>
-				<li>Sill depth: inner basin - 48 m located 75 km from the head at Hoeya Head; outer basin - 60 m located at mouth of inlet</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/knight-inlet-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/knight-inlet-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="knight-inlet-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/knight-inlet-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/knight-inlet-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/knight-inlet-oxygen-average.png" loading="lazy">
+			<div id="bute-inlet" class="inlet-content">
+				<h2>Bute Inlet</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 75 km</li>
+					<li>Maximum depth: 650 m</li>
+					<li>Major basins: one</li>
+					<li>Sill depth: 370 m, just outside the inlet in Calm Channel</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/bute-inlet-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/bute-inlet-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="bute-inlet-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/bute-inlet-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/bute-inlet-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/bute-inlet-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="bute-inlet-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/bute-inlet-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/bute-inlet-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/bute-inlet-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="knight-inlet-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/knight-inlet-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/knight-inlet-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/knight-inlet-oxygen.png" loading="lazy">
-			</div>
-			<div id="knight-inlet-common">
-			</div>
-			<div id="knight-inlet-monthly" class="averaging-content monthly">
-			</div>
-			<div id="knight-inlet-raw" class="averaging-content raw">
-			</div>
-		</div>
 
-		<div id="indian-arm" class="inlet-content">
-			<h2>Indian Arm</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: ~50 km</li>
-				<li>Maximum depth: 220 m</li>
-				<li>Major basins: one</li>
-				<li>Sill depth: shallow (15 m to 25 m) and 15 km long sill region through Burrard Inlet/Vancouver Harbour</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/indian-arm-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/indian-arm-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="indian-arm-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/indian-arm-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/indian-arm-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/indian-arm-oxygen-average.png" loading="lazy">
+			<div id="knight-inlet" class="inlet-content">
+				<h2>Knight Inlet</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 105 km</li>
+					<li>Maximum depth: 540 m</li>
+					<li>Major basins: main, deep inner basin; smaller and shallower outer basin</li>
+					<li>Sill depth: inner basin - 48 m located 75 km from the head at Hoeya Head; outer basin - 60 m located at mouth of inlet</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/knight-inlet-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/knight-inlet-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="knight-inlet-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/knight-inlet-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/knight-inlet-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/knight-inlet-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="knight-inlet-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/knight-inlet-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/knight-inlet-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/knight-inlet-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="indian-arm-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/indian-arm-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/indian-arm-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/indian-arm-oxygen.png" loading="lazy">
-			</div>
-			<div id="indian-arm-common">
-			</div>
-			<div id="indian-arm-monthly" class="averaging-content monthly">
-			</div>
-			<div id="indian-arm-raw" class="averaging-content raw">
-			</div>
-		</div>
 
-		<div id="howe-sound" class="inlet-content">
-			<h2>Howe Sound</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 44 km</li>
-				<li>Maximum depth: 285 m</li>
-				<li>Major basins: one</li>
-				<li>Sill depth: 73 m, located 18 km from the head, at Defence Islands</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/howe-sound-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/howe-sound-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="howe-sound-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/howe-sound-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/howe-sound-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/howe-sound-oxygen-average.png" loading="lazy">
+			<div id="indian-arm" class="inlet-content">
+				<h2>Indian Arm</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: ~50 km</li>
+					<li>Maximum depth: 220 m</li>
+					<li>Major basins: one</li>
+					<li>Sill depth: shallow (15 m to 25 m) and 15 km long sill region through Burrard Inlet/Vancouver Harbour</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/indian-arm-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/indian-arm-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="indian-arm-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/indian-arm-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/indian-arm-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/indian-arm-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="indian-arm-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/indian-arm-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/indian-arm-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/indian-arm-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="howe-sound-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/howe-sound-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/howe-sound-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/howe-sound-oxygen.png" loading="lazy">
-			</div>
-			<div id="howe-sound-common">
-			</div>
-			<div id="howe-sound-monthly" class="averaging-content monthly">
-			</div>
-			<div id="howe-sound-raw" class="averaging-content raw">
-			</div>
-		</div>
 
-		<div id="muchalat-inlet" class="inlet-content">
-			<h2>Muchalat Inlet</h2>
-			<h3>Physical Description</h3>
-			<ul>
-				<li>Length: 55 km</li>
-				<li>Maximum depth: 380 m</li>
-				<li>Major basins: one</li>
-				<li>Sill depth: 50 m, located at the mouth</li>
-			</ul>
-			<h3>Map and Section</h3>
-			<img src="figures/muchalat-inlet-map.gif" loading="lazy">
-			<h3>Sampling History</h3>
-			<img src="figures/muchalat-inlet-samples.png" loading="lazy">
-			<h3>Time series of deep water properties<h3>
-			<div id="muchalat-inlet-monthly" class="averaging-content monthly">
-				<h4>Temperature</h4>
-				<img src="figures/muchalat-inlet-temperature-average.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/muchalat-inlet-salinity-average.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/muchalat-inlet-oxygen-average.png" loading="lazy">
+			<div id="howe-sound" class="inlet-content">
+				<h2>Howe Sound</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 44 km</li>
+					<li>Maximum depth: 285 m</li>
+					<li>Major basins: one</li>
+					<li>Sill depth: 73 m, located 18 km from the head, at Defence Islands</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/howe-sound-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/howe-sound-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="howe-sound-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/howe-sound-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/howe-sound-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/howe-sound-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="howe-sound-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/howe-sound-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/howe-sound-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/howe-sound-oxygen.png" loading="lazy">
+				</div>
 			</div>
-			<div id="muchalat-inlet-raw" class="averaging-content raw">
-				<h4>Temperature</h4>
-				<img src="figures/muchalat-inlet-temperature.png" loading="lazy">
-				<h4>Salinity</h4>
-				<img src="figures/muchalat-inlet-salinity.png" loading="lazy">
-				<h4>Dissolved Oxygen</h4>
-				<img src="figures/muchalat-inlet-oxygen.png" loading="lazy">
+
+			<div id="muchalat-inlet" class="inlet-content">
+				<h2>Muchalat Inlet</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Length: 55 km</li>
+					<li>Maximum depth: 380 m</li>
+					<li>Major basins: one</li>
+					<li>Sill depth: 50 m, located at the mouth</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/muchalat-inlet-map.gif" loading="lazy">
+				<h3>Sampling History</h3>
+				<img src="figures/muchalat-inlet-samples.png" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="muchalat-inlet-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/muchalat-inlet-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/muchalat-inlet-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/muchalat-inlet-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="muchalat-inlet-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/muchalat-inlet-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/muchalat-inlet-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/muchalat-inlet-oxygen.png" loading="lazy">
+				</div>
 			</div>
 		</div>
 
