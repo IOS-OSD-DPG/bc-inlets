@@ -28,6 +28,7 @@
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'monthly')" id="averaging-default">Monthly Averages</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'raw')">Raw Data</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event, 'sampling')">Sampling History</button>
 		</div>
 		<p id="monthly-description" class="averaging-content monthly">
 			Data is averaged inside individual depth buckets across a month. This produces a maximum of three data points per month, one for each bucket.
@@ -58,6 +59,9 @@
 			<img src="figures/deep-water-salinity-anomalies.png" loading="lazy">
 			<h3>Dissolved Oxygen Anomalies</h3>
 			<img src="figures/deep-water-oxygen-anomalies.png" loading="lazy">
+		</div>
+
+		<div id="sampling-history-content" class="averaging-content sampling">
 			<h2>Sampling History</h2>
 			<h3>Saanich Inlet</h3>
 			<img src="figures/saanich-inlet-samples.png" loading="lazy">
