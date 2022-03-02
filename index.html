@@ -21,7 +21,7 @@
 		</p>
 		<details>
 			<summary>Click here to view map</summary>
-			<img src="https://api.mapbox.com/styles/v1/cyborgsphinx/cl02pzz5w00k116kdabpiul5x/static/-125,50,6/800x600?access_token=pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ" loading="lazy">
+			<img src="https://api.mapbox.com/styles/v1/cyborgsphinx/cl02pzz5w00k116kdabpiul5x/static/-126,51.4,5.7/900x700?access_token=pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ" loading="lazy">
 		</details>
 
 		<div id="averaging-choice" class="tab">
@@ -109,6 +109,11 @@
 			<a href="figures/rivers-inlet-monthly-sampling.png">
 				<img src="figures/rivers-inlet-monthly-sampling.png" width="800" height="200" loading="lazy">
 			</a>
+			<h3>Douglas Channel</h3>
+			<img src="figures/douglas-channel-samples.png" loading="lazy">
+			<a href="figures/douglas-channel-monthly-sampling.png">
+				<img src="figures/douglas-channel-monthly-sampling.png" width="800" height="200" loading="lazy">
+			</a>
 		</div>
 
 		<div class="averaging-content monthly raw">
@@ -121,6 +126,7 @@
 				<button class="inlet-tablinks" onclick="changeInlet(event, 'howe-sound')">Howe Sound</button>
 				<button class="inlet-tablinks" onclick="changeInlet(event, 'muchalat-inlet')">Muchalat Inlet</button>
 				<button class="inlet-tablinks" onclick="changeInlet(event, 'rivers-inlet')">Rivers Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event, 'douglas-channel')">Douglas Channel</button>
 			</div>
 
 			<div id="saanich-inlet" class="inlet-content">
@@ -363,6 +369,35 @@
 					<img src="figures/rivers-inlet-oxygen.png" loading="lazy">
 				</div>
 			</div>
+
+			<div id="douglas-channel" class="inlet-content">
+				<h2>Douglas Channel</h2>
+				<h3>Physical Description</h3>
+				<ul>
+					<li>Maximum depth: 700 m</li>
+					<li>Sill depth: 200 m</li>
+				</ul>
+				<h3>Map and Section</h3>
+				<img src="figures/douglas-channel-map.gif" loading="lazy">
+				<h3>Time series of deep water properties<h3>
+				<div id="douglas-channel-monthly" class="averaging-content monthly">
+					<h4>Temperature</h4>
+					<img src="figures/douglas-channel-temperature-average.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/douglas-channel-salinity-average.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/douglas-channel-oxygen-average.png" loading="lazy">
+				</div>
+				<div id="douglas-channel-raw" class="averaging-content raw">
+					<h4>Temperature</h4>
+					<img src="figures/douglas-channel-temperature.png" loading="lazy">
+					<h4>Salinity</h4>
+					<img src="figures/douglas-channel-salinity.png" loading="lazy">
+					<h4>Dissolved Oxygen</h4>
+					<img src="figures/douglas-channel-oxygen.png" loading="lazy">
+				</div>
+			</div>
+
 		</div>
 
 		<script src="main.js"></script>
