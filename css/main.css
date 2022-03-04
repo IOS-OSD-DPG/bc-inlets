@@ -1,6 +1,6 @@
 body {
 	margin: 60px auto;
-	width: 70%;
+	width: 90%;
 }
 
 .tab {
@@ -32,4 +32,14 @@ body {
 
 details {
 	padding: 14px 16px;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.annual-plots {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
