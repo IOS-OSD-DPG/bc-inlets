@@ -28,7 +28,7 @@
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies Time Series</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'monthly')" id="averaging-default">Monthly Averages Time Series</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'raw')">Raw Data</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'sampling')">Sampling History</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event, 'sampling')">Sampling Statistics</button>
 		</div>
 		<p id="monthly-description" class="averaging-content monthly">
 			Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
@@ -42,6 +42,11 @@
 			For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
 			Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
 			Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
+		</p>
+		<p id="sampling-description" class="averaging-content sampling">
+			The sampling statistics of major BC inlets were investigated before constructing the time series of deep water properties to help understand the number of samples and profiles collected and sampling frequency on annual and monthly scales.
+			The data archives of Ocean Sciences, Hakai Institute, and Ocean Networks Canada have been searched for all data holdings in the geographical area corresponding to the major inlets of the BC coast.
+			The data holdings from individual inlets were summarized by the time in the form of 1. sampling histograms depicting the length of the time series and number of samples per year and 2. sampling heat maps display the number of samples per month.
 		</p>
 
 		<div id="annual-averaging-content" class="averaging-content annual">
@@ -120,7 +125,7 @@
 		</div>
 
 		<div id="sampling-history-content" class="averaging-content sampling">
-			<h2>Sampling History</h2>
+			<h2>Sampling Statistics</h2>
 			<h3>Saanich Inlet</h3>
 			<img src="figures/saanich-inlet-samples.png" loading="lazy">
 			<a href="figures/saanich-inlet-monthly-sampling.png">
