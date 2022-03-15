@@ -43,3 +43,7 @@ img {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
+p {
+	line-height: 1.5;
+}
