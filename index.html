@@ -25,7 +25,7 @@
 		</details>
 
 		<div id="averaging-choice" class="tab">
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies Time Series</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'monthly')" id="averaging-default">Monthly Averages</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'raw')">Raw Data</button>
 			<button class="averaging-tablinks" onclick="changeAveraging(event, 'sampling')">Sampling History</button>
@@ -38,14 +38,14 @@
 			Data is not averaged. All data found is shown, coloured according to its depth.
 		</p>
 		<p id="annual-description" class="averaging-content annual">
-			Data is averaged annually and presented in a single plot for each data value.
-			Annomalies (deviation from the average) are calculated and plotted for each data value as well.
-			All inlets are shown in the same plot.
-			The average is calculated as the arithmetic mean of all data considered deep across a month.
+			Annual averages and anomalies time series of deep water properties facilitate the comparison of deep water variations among the inlets.
+			For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
+			Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
+			Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
 		</p>
 
 		<div id="annual-averaging-content" class="averaging-content annual">
-			<h2>Annual Averages (Salish Sea)</h2>
+			<h2>Annual Averages (Salish Sea Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-annual-averages-salish-sea.png">
 					<img src="figures/deep-water-temperature-annual-averages-salish-sea.png" loading="lazy">
@@ -57,7 +57,7 @@
 					<img src="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
 				</a>
 			</div>
-			<h2>Annual Averages (North Mainland Coast)</h2>
+			<h2>Annual Averages (Central and North Coast Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-annual-averages-north-mainland-coast.png">
 					<img src="figures/deep-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
@@ -69,7 +69,7 @@
 					<img src="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
 				</a>
 			</div>
-			<h2>Annual Averages (West Vancouver Island Coast)</h2>
+			<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png">
 					<img src="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
@@ -81,7 +81,7 @@
 					<img src="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 				</a>
 			</div>
-			<h2>Annual Anomalies (Salish Sea)</h2>
+			<h2>Annual Anomalies (Salish Sea Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-anomalies-salish-sea.png">
 					<img src="figures/deep-water-temperature-anomalies-salish-sea.png" loading="lazy">
@@ -93,7 +93,7 @@
 					<img src="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
 				</a>
 			</div>
-			<h2>Annual Anomalies (North Mainland Coast)</h2>
+			<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-anomalies-north-mainland-coast.png">
 					<img src="figures/deep-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
@@ -105,7 +105,7 @@
 					<img src="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
 				</a>
 			</div>
-			<h2>Annual Anomalies (West Vancouver Island Coast)</h2>
+			<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
 			<div class="annual-plots">
 				<a href="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png">
 					<img src="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
