@@ -39,10 +39,10 @@
 		</details>
 
 		<div id="averaging-choice" class="tab">
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'annual')">Annual Averages &amp; Anomalies Time Series</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'monthly')" id="averaging-default">Monthly Averages Time Series</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'raw')">Raw Data</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event, 'sampling')">Sampling Statistics</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="annual">Annual Averages &amp; Anomalies Time Series</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="monthly" id="averaging-default">Monthly Averages Time Series</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="raw">Raw Data</button>
+			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="sampling">Sampling Statistics</button>
 		</div>
 		<p id="monthly-description" class="averaging-content monthly">
 			Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
@@ -189,18 +189,18 @@
 
 		<div class="averaging-content monthly raw">
 			<div id="inlet-choice" class="tab">
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'saanich-inlet')" id="inlet-default">Saanich Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'jervis-inlet')">Jervis Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'bute-inlet')">Bute Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'knight-inlet')">Knight Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'indian-arm')">Indian Arm</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'howe-sound')">Howe Sound</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'muchalat-inlet')">Muchalat Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'rivers-inlet')">Rivers Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event, 'douglas-channel')">Douglas Channel</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="saanich-inlet">Saanich Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="jervis-inlet">Jervis Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="bute-inlet">Bute Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="knight-inlet">Knight Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="indian-arm">Indian Arm</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="howe-sound">Howe Sound</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="muchalat-inlet">Muchalat Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="rivers-inlet">Rivers Inlet</button>
+				<button class="inlet-tablinks" onclick="changeInlet(event)" id="douglas-channel">Douglas Channel</button>
 			</div>
 
-			<div id="saanich-inlet" class="inlet-content">
+			<div id="saanich-inlet-content" class="inlet-content">
 				<h2>Saanich Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -250,7 +250,7 @@
 				</div>
 			</div>
 
-			<div id="jervis-inlet" class="inlet-content">
+			<div id="jervis-inlet-content" class="inlet-content">
 				<h2>Jervis Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -295,7 +295,7 @@
 				</div>
 			</div>
 
-			<div id="bute-inlet" class="inlet-content">
+			<div id="bute-inlet-content" class="inlet-content">
 				<h2>Bute Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -343,7 +343,7 @@
 				</div>
 			</div>
 
-			<div id="knight-inlet" class="inlet-content">
+			<div id="knight-inlet-content" class="inlet-content">
 				<h2>Knight Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -392,7 +392,7 @@
 				</div>
 			</div>
 
-			<div id="indian-arm" class="inlet-content">
+			<div id="indian-arm-content" class="inlet-content">
 				<h2>Indian Arm</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -438,7 +438,7 @@
 				</div>
 			</div>
 
-			<div id="howe-sound" class="inlet-content">
+			<div id="howe-sound-content" class="inlet-content">
 				<h2>Howe Sound</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -485,7 +485,7 @@
 				</div>
 			</div>
 
-			<div id="muchalat-inlet" class="inlet-content">
+			<div id="muchalat-inlet-content" class="inlet-content">
 				<h2>Muchalat Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -531,7 +531,7 @@
 				</div>
 			</div>
 
-			<div id="rivers-inlet" class="inlet-content">
+			<div id="rivers-inlet-content" class="inlet-content">
 				<h2>Rivers Inlet</h2>
 				<h3>Physical Description</h3>
 				<ul>
@@ -569,7 +569,7 @@
 				</div>
 			</div>
 
-			<div id="douglas-channel" class="inlet-content">
+			<div id="douglas-channel-content" class="inlet-content">
 				<h2>Douglas Channel</h2>
 				<h3>Physical Description</h3>
 				<ul>

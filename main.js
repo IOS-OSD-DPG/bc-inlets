@@ -14,8 +14,10 @@ function clearContent(kind) {
 	}
 }
 
-function changeAveraging(event, averaging) {
+function changeAveraging(event) {
 	var i;
+	var target = event.currentTarget;
+	var averaging = target.id;
 
 	clearContent("averaging")
 
@@ -23,17 +25,33 @@ function changeAveraging(event, averaging) {
 	for (i = 0; i < showContent.length; i++) {
 		showContent[i].style.display = "block";
 	}
-	event.currentTarget.className += " active";
+	target.className += " active";
+
+	window.sessionStorage.setItem("averaging", averaging)
 }
 
-function changeInlet(event, inlet) {
+function changeInlet(event) {
 	var i;
+	var target = event.currentTarget;
+	var inlet = target.id;
 
 	clearContent("inlet")
 
-	document.getElementById(inlet).style.display = "block";
-	event.currentTarget.className += " active";
+	document.getElementById(inlet + "-content").style.display = "block";
+	target.className += " active";
+
+	window.sessionStorage.setItem("inlet", inlet)
 }
 
-document.getElementById("averaging-default").click();
-document.getElementById("inlet-default").click();
+if (window.sessionStorage.getItem("averaging")) {
+	document.getElementById(window.sessionStorage.getItem("averaging")).click();
+} else {
+	// choose default
+	document.getElementById("monthly").click();
+}
+if (window.sessionStorage.getItem("inlet")) {
+	document.getElementById(window.sessionStorage.getItem("inlet")).click();
+} else {
+	// choose default
+	document.getElementById("saanich-inlet").click();
+}
