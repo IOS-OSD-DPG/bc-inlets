@@ -1,615 +1,218 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Deep Water Properties for BC Inlets</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-	<body>
-		<h1>Deep Water Properties for BC Inlets</h1>
-		<p>
-			The deep waters of inlets, i.e. those waters trapped behind the inlet's sill, are usually quiescent. Isolated from the annual and higher frequency variations present in the near surface waters, the deep waters provide a good sampling location for observing the long term changes in water properties (temperature, salinity, and dissolved oxygen).
-			The deep water chronicle the temperature, salinity, and dissolved oxygen properties of the outside waters.
-		</p>
-		<p>
-			The almost 70 year long time series of water properties from some inlets, more than 90 years in the case of Saanich Inlet, are potentially rich sources of information about our coastal environment and how it has changed in the last half century.
-			This page presents the annual and monthly time series of deep water properties from the major BC inlets (Salish Sea Inlets - Saanich, Indian Arm, Howe Sound, Toba, and Jervis; Central and North Coast Inlets - Observatory, Douglas Channel, Dean, Burk, Rivers, Knight, and Bute; West Coast Vancouver Island Inlets - Muchalat, Alberni, Effingham, Neroutsos, Rupert-Holberg).
-			The page also provides basic physical, hydrologic, and oceanographic information for these inlets.
-		</p>
-		<h2>Background</h2>
-		<p>
-			Dr. George Pickard of the Institute of Oceanography at the University of British Columbia (UBC) initiated in 1951, and conducted for many years, a series of inlet cruises.
-			The inlet cruises, conducted mostly in the summer, were used for studies of the BC fjords and also served as training exercises for oceanography students.
-			Students obtained and analyzed water samples for temperature, salinity, and dissolved oxygen in many fjords, straits, passages, and channels on the entire BC coast.
-			The data set is a remarkably long (~70 years), high quality time series that spans the entire length of the mainland coast and Vancouver Island.
-		</p>
-		<p>
-			Several other researchers, notably Drs. John Tully and Mike Waldichuk, also conducted sampling programs in several BC inlets.
-			Dr. Tully's work extends back to the 1930's, and Dr. Waldichuk conducted several pollution cruises in the 60's and 70's to inlets where there were pulp mills. From the mid 1980's to the late 2000's, the fjord research at the Institute of Ocean Sciences (IOS) had provided extensive sets of observations from several fjords, in particular Knight, Saanich, and Alberni Inlets.
-			All of the IOS data sets and most, but not all, of the early inlet and coastal water surveys are now preserved in digital form in the IOS data archive.
-		</p>
-		<p id="source-description">
-			Data is taken from the archive at <a href="https://www.waterproperties.org/osd_data_archive">waterproperties.ca</a> and
-			<a href="https://catalogue.cioos.ca/dataset/f239e86c-38d1-4fb2-8b17-acaed794221c">Hakai Water Properties Vertical Profile Data Measures by Oceanographic Profilers, Provisional</a>.
-			This is a mix of netCDF, IOS Shell, and CSV files.
-		</p>
-		<details>
-			<summary>Click here to view map</summary>
-			<img src="https://api.mapbox.com/styles/v1/cyborgsphinx/cl0cpnth0000d15rujrameamv/static/-126,51.4,5.7/900x700?access_token=pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ" loading="lazy">
-		</details>
+---
+title: Deep Water Properties for BC Inlets
+layout: default
+---
 
-		<div id="averaging-choice" class="tab">
-			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="annual">Annual Averages &amp; Anomalies Time Series</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="monthly" id="averaging-default">Monthly Averages Time Series</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="raw">Raw Data</button>
-			<button class="averaging-tablinks" onclick="changeAveraging(event)" id="sampling">Sampling Statistics</button>
+<h1>{{ page.title }}</h1>
+<p>
+	The deep waters of inlets, i.e. those waters trapped behind the inlet's sill, are usually quiescent. Isolated from the annual and higher frequency variations present in the near surface waters, the deep waters provide a good sampling location for observing the long term changes in water properties (temperature, salinity, and dissolved oxygen).
+	The deep water chronicle the temperature, salinity, and dissolved oxygen properties of the outside waters.
+</p>
+<p>
+	The almost 70 year long time series of water properties from some inlets, more than 90 years in the case of Saanich Inlet, are potentially rich sources of information about our coastal environment and how it has changed in the last half century.
+	This page presents the annual and monthly time series of deep water properties from the major BC inlets (Salish Sea Inlets - Saanich, Indian Arm, Howe Sound, Toba, and Jervis; Central and North Coast Inlets - Observatory, Douglas Channel, Dean, Burk, Rivers, Knight, and Bute; West Coast Vancouver Island Inlets - Muchalat, Alberni, Effingham, Neroutsos, Rupert-Holberg).
+	The page also provides basic physical, hydrologic, and oceanographic information for these inlets.
+</p>
+<h2>Background</h2>
+<p>
+	Dr. George Pickard of the Institute of Oceanography at the University of British Columbia (UBC) initiated in 1951, and conducted for many years, a series of inlet cruises.
+	The inlet cruises, conducted mostly in the summer, were used for studies of the BC fjords and also served as training exercises for oceanography students.
+	Students obtained and analyzed water samples for temperature, salinity, and dissolved oxygen in many fjords, straits, passages, and channels on the entire BC coast.
+	The data set is a remarkably long (~70 years), high quality time series that spans the entire length of the mainland coast and Vancouver Island.
+</p>
+<p>
+	Several other researchers, notably Drs. John Tully and Mike Waldichuk, also conducted sampling programs in several BC inlets.
+	Dr. Tully's work extends back to the 1930's, and Dr. Waldichuk conducted several pollution cruises in the 60's and 70's to inlets where there were pulp mills. From the mid 1980's to the late 2000's, the fjord research at the Institute of Ocean Sciences (IOS) had provided extensive sets of observations from several fjords, in particular Knight, Saanich, and Alberni Inlets.
+	All of the IOS data sets and most, but not all, of the early inlet and coastal water surveys are now preserved in digital form in the IOS data archive.
+</p>
+<p id="source-description">
+	Data is taken from the archive at <a href="https://www.waterproperties.org/osd_data_archive">waterproperties.ca</a> and
+	<a href="https://catalogue.cioos.ca/dataset/f239e86c-38d1-4fb2-8b17-acaed794221c">Hakai Water Properties Vertical Profile Data Measures by Oceanographic Profilers, Provisional</a>.
+	This is a mix of netCDF, IOS Shell, and CSV files.
+</p>
+<details>
+	<summary>Click here to view map</summary>
+	<img src="https://api.mapbox.com/styles/v1/cyborgsphinx/cl0cpnth0000d15rujrameamv/static/-126,51.4,5.7/900x700?access_token=pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ" loading="lazy">
+</details>
+
+<div id="averaging-choice" class="tab">
+	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="annual">Annual Averages &amp; Anomalies Time Series</button>
+	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="monthly" id="averaging-default">Monthly Averaged Time Series</button>
+	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="raw">Raw Data</button>
+	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="sampling">Sampling Statistics</button>
+</div>
+<p id="monthly-description" class="averaging-content monthly">
+	Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
+	Monthly averages time series of temperature, salinity, and dissolved oxygen for individual inlets are shown below.
+</p>
+<p id="raw-description" class="averaging-content raw">
+	Data is not averaged. All data found is shown, coloured according to its depth.
+</p>
+<p id="annual-description" class="averaging-content annual">
+	Annual averages and anomalies time series of deep water properties facilitate the comparison of deep water variations among the inlets.
+	For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
+	Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
+	Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
+</p>
+<p id="sampling-description" class="averaging-content sampling">
+	The sampling statistics of major BC inlets were investigated before constructing the time series of deep water properties to help understand the number of samples and profiles collected and sampling frequency on annual and monthly scales.
+	The data archives of Ocean Sciences, Hakai Institute, and Ocean Networks Canada have been searched for all data holdings in the geographical area corresponding to the major inlets of the BC coast.
+	The data holdings from individual inlets were summarized by the time in the form of 1. sampling histograms depicting the length of the time series and number of samples per year and 2. sampling heat maps display the number of samples per month.
+</p>
+
+<div id="annual-averaging-content" class="averaging-content annual">
+	<h2>Annual Averages (Salish Sea Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-annual-averages-salish-sea.png">
+			<img src="figures/deep-water-temperature-annual-averages-salish-sea.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-annual-averages-salish-sea.png">
+			<img src="figures/deep-water-salinity-annual-averages-salish-sea.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png">
+			<img src="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
+		</a>
+	</div>
+	<h2>Annual Averages (Central and North Coast Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-annual-averages-north-mainland-coast.png">
+			<img src="figures/deep-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-annual-averages-north-mainland-coast.png">
+			<img src="figures/deep-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
+			<img src="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
+		</a>
+	</div>
+	<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+	</div>
+	<h2>Annual Anomalies (Salish Sea Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-anomalies-salish-sea.png">
+			<img src="figures/deep-water-temperature-anomalies-salish-sea.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-anomalies-salish-sea.png">
+			<img src="figures/deep-water-salinity-anomalies-salish-sea.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png">
+			<img src="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
+		</a>
+	</div>
+	<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-anomalies-north-mainland-coast.png">
+			<img src="figures/deep-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-anomalies-north-mainland-coast.png">
+			<img src="figures/deep-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
+			<img src="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
+		</a>
+	</div>
+	<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
+	<div class="annual-plots">
+		<a href="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+		<a href="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		</a>
+	</div>
+</div>
+
+<div id="sampling-history-content" class="averaging-content sampling">
+	<h2>Sampling Statistics</h2>
+	{% for inlet in site.data.inlets %}
+	<h3>{{ inlet.id | replace: "-", " " | capitalize }}</h3>
+	<img src="figures/{{ inlet.id }}-samples.png" loading="lazy">
+	<a href="figures/{{ inlet.id }}-monthly-sampling.png">
+		<img src="figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
+	</a>
+	{% endfor %}
+</div>
+
+<div class="averaging-content monthly raw">
+	<div id="inlet-choice" class="tab">
+		{% for inlet in site.data.inlets %}
+		<button class="inlet-tablinks" onclick="changeInlet(event)" id="{{ inlet.id }}">{{ inlet.id | replace: "-", " " | capitalize }}</button>
+		{% endfor %}
+	</div>
+
+	{% for inlet in site.data.inlets %}
+	<div id="{{ inlet.id }}-content" class="inlet-content">
+		<h2>{{ inlet.id | replace: "-", " " | capitalize }}</h2>
+		<h3>Physical Description</h3>
+		<ul>
+			{% if inlet.length %}
+			<li>Length: {{ inlet.length }}</li>
+			{% endif %}
+			{% if inlet.depth %}
+			<li>Maximum depth: {{ inlet.depth }}</li>
+			{% endif %}
+			{% if inlet.basins %}
+			<li>Major basins: {{ inlet.basins }}</li>
+			{% endif %}
+			{% if inlet.sill %}
+			<li>Sill depth: {{ inlet.sill }}</li>
+			{% endif %}
+			{% if inlet.surface %}
+			<li>Surface area: {{ inlet.surface }}</li>
+			{% endif %}
+		</ul>
+		<h3>Map and Section</h3>
+		{% if inlet.legacy %}
+		<img src="figures/{{ inlet.id }}-map.gif" loading="lazy">
+		{% else %}
+		<img src="figures/{{ inlet.id }}-map.png" loading="lazy">
+		<img src="figures/{{ inlet.id }}-section.png" loading="lazy">
+		{% endif %}
+		{% if inlet.runoff %}
+		<h3>Runoff</h3>
+		{% for runoff in inlet.runoff %}
+		<p>{{ runoff }}</p>
+		{% endfor %}
+		{% endif %}
+		{% if inlet.renewal %}
+		<h3>Deep water renewal process</h3>
+		{% for renewal in inlet.renewal %}
+		<p>{{ renewal }}</p>
+		{% endfor %}
+		{% endif %}
+		<h3>Time series of deep water properties</h3>
+		<div id="{{ inlet.id }}-monthly" class="averaging-content monthly">
+			<h4>Temperature</h4>
+			<img src="figures/{{ inlet.id }}-temperature-average.png" loading="lazy">
+			<h4>Salinity</h4>
+			<img src="figures/{{ inlet.id }}-salinity-average.png" loading="lazy">
+			<h4>Dissolved Oxygen</h4>
+			<img src="figures/{{ inlet.id }}-oxygen-average.png" loading="lazy">
 		</div>
-		<p id="monthly-description" class="averaging-content monthly">
-			Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
-			Monthly averages time series of temperature, salinity, and dissolved oxygen for individual inlets are shown below.
-		</p>
-		<p id="raw-description" class="averaging-content raw">
-			Data is not averaged. All data found is shown, coloured according to its depth.
-		</p>
-		<p id="annual-description" class="averaging-content annual">
-			Annual averages and anomalies time series of deep water properties facilitate the comparison of deep water variations among the inlets.
-			For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
-			Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
-			Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
-		</p>
-		<p id="sampling-description" class="averaging-content sampling">
-			The sampling statistics of major BC inlets were investigated before constructing the time series of deep water properties to help understand the number of samples and profiles collected and sampling frequency on annual and monthly scales.
-			The data archives of Ocean Sciences, Hakai Institute, and Ocean Networks Canada have been searched for all data holdings in the geographical area corresponding to the major inlets of the BC coast.
-			The data holdings from individual inlets were summarized by the time in the form of 1. sampling histograms depicting the length of the time series and number of samples per year and 2. sampling heat maps display the number of samples per month.
-		</p>
-
-		<div id="annual-averaging-content" class="averaging-content annual">
-			<h2>Annual Averages (Salish Sea Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-annual-averages-salish-sea.png">
-					<img src="figures/deep-water-temperature-annual-averages-salish-sea.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-annual-averages-salish-sea.png">
-					<img src="figures/deep-water-salinity-annual-averages-salish-sea.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png">
-					<img src="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
-				</a>
-			</div>
-			<h2>Annual Averages (Central and North Coast Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-annual-averages-north-mainland-coast.png">
-					<img src="figures/deep-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-annual-averages-north-mainland-coast.png">
-					<img src="figures/deep-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
-					<img src="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
-				</a>
-			</div>
-			<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-			</div>
-			<h2>Annual Anomalies (Salish Sea Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-anomalies-salish-sea.png">
-					<img src="figures/deep-water-temperature-anomalies-salish-sea.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-anomalies-salish-sea.png">
-					<img src="figures/deep-water-salinity-anomalies-salish-sea.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png">
-					<img src="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
-				</a>
-			</div>
-			<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-anomalies-north-mainland-coast.png">
-					<img src="figures/deep-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-anomalies-north-mainland-coast.png">
-					<img src="figures/deep-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
-					<img src="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
-				</a>
-			</div>
-			<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
-			<div class="annual-plots">
-				<a href="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-				<a href="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
-					<img src="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
-				</a>
-			</div>
+		<div id="{{ inlet.id }}-raw" class="averaging-content raw">
+			<h4>Temperature</h4>
+			<img src="figures/{{ inlet.id }}-temperature.png" loading="lazy">
+			<h4>Salinity</h4>
+			<img src="figures/{{ inlet.id }}-salinity.png" loading="lazy">
+			<h4>Dissolved Oxygen</h4>
+			<img src="figures/{{ inlet.id }}-oxygen.png" loading="lazy">
 		</div>
+	</div>
+	{% endfor %}
 
-		<div id="sampling-history-content" class="averaging-content sampling">
-			<h2>Sampling Statistics</h2>
-			<h3>Saanich Inlet</h3>
-			<img src="figures/saanich-inlet-samples.png" loading="lazy">
-			<a href="figures/saanich-inlet-monthly-sampling.png">
-				<img src="figures/saanich-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Jervis Inlet</h3>
-			<img src="figures/jervis-inlet-samples.png" loading="lazy">
-			<a href="figures/jervis-inlet-monthly-sampling.png">
-				<img src="figures/jervis-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Bute Inlet</h3>
-			<img src="figures/bute-inlet-samples.png" loading="lazy">
-			<a href="figures/bute-inlet-monthly-sampling.png">
-				<img src="figures/bute-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Knight Inlet</h3>
-			<img src="figures/knight-inlet-samples.png" loading="lazy">
-			<a href="figures/knight-inlet-monthly-sampling.png">
-				<img src="figures/knight-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Indian Arm</h3>
-			<img src="figures/indian-arm-samples.png" loading="lazy">
-			<a href="figures/indian-arm-monthly-sampling.png">
-				<img src="figures/indian-arm-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Howe Sound</h3>
-			<img src="figures/howe-sound-samples.png" loading="lazy">
-			<a href="figures/howe-sound-monthly-sampling.png">
-				<img src="figures/howe-sound-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Muchalat Inlet</h3>
-			<img src="figures/muchalat-inlet-samples.png" loading="lazy">
-			<a href="figures/muchalat-inlet-monthly-sampling.png">
-				<img src="figures/muchalat-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Rivers Inlet</h3>
-			<img src="figures/rivers-inlet-samples.png" loading="lazy">
-			<a href="figures/rivers-inlet-monthly-sampling.png">
-				<img src="figures/rivers-inlet-monthly-sampling.png" loading="lazy">
-			</a>
-			<h3>Douglas Channel</h3>
-			<img src="figures/douglas-channel-samples.png" loading="lazy">
-			<a href="figures/douglas-channel-monthly-sampling.png">
-				<img src="figures/douglas-channel-monthly-sampling.png" loading="lazy">
-			</a>
-		</div>
+</div>
 
-		<div class="averaging-content monthly raw">
-			<div id="inlet-choice" class="tab">
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="saanich-inlet">Saanich Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="jervis-inlet">Jervis Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="bute-inlet">Bute Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="knight-inlet">Knight Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="indian-arm">Indian Arm</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="howe-sound">Howe Sound</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="muchalat-inlet">Muchalat Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="rivers-inlet">Rivers Inlet</button>
-				<button class="inlet-tablinks" onclick="changeInlet(event)" id="douglas-channel">Douglas Channel</button>
-			</div>
-
-			<div id="saanich-inlet-content" class="inlet-content">
-				<h2>Saanich Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 24 km</li>
-					<li>Maximum depth: 255 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: 70 m, located at the mouth</li>
-					<li>Surface area: 65 km<sup>2</sup></li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/saanich-inlet-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					There are no major rivers discharging along the shores of Saanich Inlet as the total watershed area for Saanich Inlet is relatively small (~400 km<sup>2</sup>).
-					The mean annual discharge for the Goldstream River and Shawnigan Creek combined is less than 3 m<sup>3</sup> s<sup>-1</sup> (Drinnan et al 1995).
-					However, the Cowichan River, which discharges outside the inlet into Satellite Channel, is a significant source of freshwater (mean annual discharge ~ 50 m<sup>3</sup> s<sup>-1</sup>) in the immediate vicinity of the inlet.
-					The local streams and the Cowichan River have the highest flow rates in the winter months and minimum during the drier summer months.
-					Within the Georgia Basin, the Fraser River is by far the major source of freshwater.
-					The Fraser River flow is highly seasonal and unlike the Cowichan River its peak discharge occurs in late May and June as a result of the snowmelt in the interior of the province.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					For most of the year the deep waters are devoid of dissolved oxygen or anoxic, and hydrogen sulphide (H2S) is often detected near the bottom.
-					In the late summer and early fall, the density of waters in Haro Strait and Satellite Channel are sufficiently high that some oxygenated waters spill into the deep basin of Saanich Inlet (Anderson and Devol 1973).
-					The amount of renewal or replacement of the inlet deep waters varies from year to year.
-					The details of the renewal process are controlled by the neap - spring variation in tidal mixing in the energetic tidal passages outside Saanich Inlet (Stucchi and Giovando 1984).
-					During neap tides when tidal mixing is at a minimum, dense renewal water in Haro Strait is present at or above sill depth and able to traverse Satellite Channel and arrive at the mouth of Saanich Inlet with sufficiently high density to flow into the deep waters of the inlet.
-					During spring tides, tidal mixing is strong and the depth of the renewal water is below that of the inlet's sill depth.
-					Immediately after a renewal, the deep waters have low but detectable amounts of dissolved oxygen, but after a few months the deep waters return to anoxic conditions.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="saanich-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/saanich-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/saanich-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/saanich-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="saanich-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/saanich-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/saanich-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/saanich-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="jervis-inlet-content" class="inlet-content">
-				<h2>Jervis Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 89 km</li>
-					<li>Maximum depth: 670 m</li>
-					<li>Major basins: several</li>
-					<li>Sill depth: outer basin - 240 m, located at mouth of inlet; inner basin - 219 m, located near Patrick Point; Princess Louisa Inlet - 6 m</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/jervis-inlet-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using the area of the watershed (~1400 km<sup>2</sup>) and local precipitation data.
-					The estimated mean annual discharge of 180 m<sup>3</sup> s<sup>-1</sup> is considerably smaller than the discharge in most of the longer BC inlets.
-					Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.
-					The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973).
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					The outer and the largest basin in Jervis Inlet has a relatively deep sill at 240 m located at the mouth of the inlet where it connects with the Strait of Georgia.
-					The deep waters of the inlet are renewed during the 3rd and 4th quarter of the year.
-					The timing of the deep water renewal in the inlet is consistent with the summertime renewal of the deep waters of the Strait of Georgia (Thomson 1994).
-					Dissolved oxygen concentrations provide a good indicator of the extent of the renewal with large increases in the dissolved oxygen corresponding to large influxes of the denser water from the strait.
-					Deep water renewal occurs annually, but in some years no increase in dissolved oxygen is observed indicating that volume of renewal water was so small that one may consider it to have been a non-renewal year.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="jervis-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/jervis-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/jervis-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/jervis-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="jervis-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/jervis-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/jervis-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/jervis-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="bute-inlet-content" class="inlet-content">
-				<h2>Bute Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 75 km</li>
-					<li>Maximum depth: 650 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: 370 m, just outside the inlet in Calm Channel</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/bute-inlet-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					There are two main rivers that discharge into Bute Inlet, the Homathko and the Southgate, and both enter at the head of the inlet.
-					The Homathko, the largest river, drains an interior watershed (~ 5720 km<sup>2</sup>) containing several permanent ice fields.
-					Trites (1955) estimated the total mean annual freshwater flow into the inlet to be approximately 410 m<sup>3</sup> s<sup>-1</sup> of which 280 m<sup>3</sup> s<sup>-1</sup> is from the Homathko River.
-					Runoff to Bute Inlet is highly seasonal, peaking in July because of snow and ice melt from the interior watershed.
-					The lowest discharge occurs in the winter months because most of the precipitation is stored as snow in the higher elevations of the watershed.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					Bute Inlet is a deep inlet located amongst the narrow tidal passages at the northern end of the Strait of Georgia.
-					The main passage for the deep waters of Bute Inlet is to the south over the very deep (370 m) sill in Calm Channel and then through Sutil Channel to the Strait of Georgia.
-					The passages to the northern waters of Johnstone Strait and Queen Charlotte Strait are constricted and shallow.
-					Tabata (1957) reported on the early oceanographic surveys of Bute Inlet, and later Lafond and Pickard (1975) described the deep water renewal process.
-					Using a series of observations from 22 cruises over a two year period from 1972 to 1974 Lafond and Pickard (1975) documented several inflow events.
-					The renewal of the deepest (&gt;400 m) waters occurs in the 3rd and 4th quarter of the year.
-					The timing of the renewal of Bute Inlet deep waters is supported by the observed fourth quarter maximum in salinity in Sutil Channel (Pickard 1975) and consistent with the annual deep water cycle in the Strait of Georgia.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="bute-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/bute-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/bute-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/bute-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="bute-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/bute-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/bute-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/bute-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="knight-inlet-content" class="inlet-content">
-				<h2>Knight Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 105 km</li>
-					<li>Maximum depth: 540 m</li>
-					<li>Major basins: main, deep inner basin; smaller and shallower outer basin</li>
-					<li>Sill depth: inner basin - 48 m located 75 km from the head at Hoeya Head; outer basin - 60 m located at mouth of inlet</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/knight-inlet-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					There are two main rivers that discharge into Knight Inlet, the Klinaklini and Franklin, and both enter at the head of the inlet.
-					The Klinaklini, the largest river, drains an interior watershed (~ 5780 km<sup>2</sup>) containing several permanent ice fields.
-					Trites (1955) estimated the total mean annual freshwater flow into the inlet to be approximately 410 m<sup>3</sup> s<sup>-1</sup> of which 293 m<sup>3</sup> s<sup>-1</sup> is from the Klinaklini River.
-					Runoff to Knight Inlet is highly seasonal, peaking in July because of snow and ice melt from the interior watershed.
-					The lowest discharge occurs in the winter months because most of the precipitation is stored as snow in the higher elevations of the watershed.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					Knight Inlet has been the chosen location of many oceanographic studies.
-					In particular, several studies have focused on the dynamics of the energetic stratified flow over the sill of Knight Inlet (Farmer and Smith 1980, Stacey and Pond 1992) and the implications for mixing and estuarine circulation (Freeland and Farmer 1980).
-				</p>
-				<p>
-					Stacey (1985) briefly describes the deep water renewal cycle in both the inner and outer basins using the observations collected during the 1977 to 1979 intensive sampling period.
-					For the larger and deeper inner basin, the renewal of the deepest waters (300 m to the bottom) begins in early summer (May-June) and continues through to late fall (October-November).
-					The relatively high (~3 ml/l) deep water dissolved oxygen levels indicate that renewals are frequent and that a large portion of the deep waters are exchanged.
-				</p>
-				<p>
-					Care must be taken when interpreting the time series of deep water temperatures and salinities as there are appreciable annual signals: ~ 0.4 &deg;C for temperature and ~ 0.1 PSU for salinity (Pickard 1975).
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="knight-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/knight-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/knight-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/knight-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="knight-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/knight-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/knight-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/knight-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="indian-arm-content" class="inlet-content">
-				<h2>Indian Arm</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: ~50 km</li>
-					<li>Maximum depth: 220 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: shallow (15 m to 25 m) and 15 km long sill region through Burrard Inlet/Vancouver Harbour</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/indian-arm-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					Pickard (1961) lists Indian Arm as a low runoff fjord having only small rivers and streams.
-					De Young and Pond (1988) report that the average annual freshwater flow into Indian Arm is about 42 m<sup>3</sup> s<sup>-1</sup> of which about half is discharged by the Buntzen power plant.
-					The Indian River which is located at the head of the inlet is a relatively small river and contributes about 12 m<sup>3</sup> s<sup>-1</sup>.
-					The Seymour and Capilano Rivers are also significant sources of freshwater that discharge 15.9 m<sup>3</sup> s<sup>-1</sup> and 19.8 m<sup>3</sup> s<sup>-1</sup> respectively into Burrard Inlet.
-					Gilmartin (1962) describes the flow of freshwater into Indian Arm as having a bimodal cycle: a late spring to early summer peak caused by melt waters and a fall to winter peak caused by direct runoff from rainfall and regulated flow from the Buntzen power plant.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					De Young and Pond (1988) have studied the deep water renewal process and describe the intrusions of denser water into Indian Arm as quasi-periodic.
-					In the years when renewals take place, they occur late in the year coincident with the timing of the highest density at 100m depth in the Strait of Georgia.
-					Given the long and shallow sill region in Burrard Inlet, the spring-neap variations in tidal mixing over the constricted sill control the timing of the inflows of denser waters into Indian Arm.
-					The reduced mixing during neap tides in combination with periods of low run off permit dense waters from outside to traverse the sill in Burrard Inlet with comparatively small reduction in density.
-					During spring tides or periods of high run off the dense water from outside is vigorously mixed and its density sufficiently reduced to prevent deep water renewal in Indian Arm.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="indian-arm-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/indian-arm-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/indian-arm-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/indian-arm-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="indian-arm-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/indian-arm-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/indian-arm-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/indian-arm-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="howe-sound-content" class="inlet-content">
-				<h2>Howe Sound</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 44 km</li>
-					<li>Maximum depth: 285 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: 73 m, located 18 km from the head, at Defence Islands</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/howe-sound-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					Howe Sound is a high runoff fjord and receives more freshwater discharge than some of the longer and larger fjords (Bute and Knight).
-					The Squamish River with an annual mean discharge of 300 m<sup>3</sup> s<sup>-1</sup> is the principal source of runoff to this fjord.
-					Discharging at the head of the fjord, the Squamish River and its tributaries account for approximately two-thirds of the estimated 460 m<sup>3</sup> s<sup>-1</sup> total freshwater discharge to Howe Sound (Trites 1955).
-					The watershed for the Squamish River and tributaries which totals about 3,600 km<sup>2</sup>, drains both interior snow and ice fields and lower elevation coastal regions.
-					Like Knight and Bute inlets the maximum discharge occurs during the summer as the interior and higher elevation snow and ice fields melt.
-					However, Howe Sound experiences a secondary and highly variable discharge maximum in the late fall because of precipitation falling mainly as rain.
-					Minimum flows are in late winter and early spring when precipitation is mainly snow and is stored at the higher elevations.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					Bell (1973) examined the deep water renewal process in Howe Sound using data collected from 1959 to 1973 and described the deep waters of Howe Sound as undergoing aperiodic renewals.
-					Exchanges of the deepest water occur every 3 to 4 years, and the renewals occur in the winter coincident with the seasonal density maximum in the outside waters (Strait of Georgia) at sill depth.
-					According to Bell (1973), the deepest renewals were also related to strong outflow winds (Squamish winds) associated with outbreaks of the cold air mass over the interior.
-					Exchanges of the intermediate deep waters are more frequent and often occur in late spring and appear at times to be triggered by the Squamish River freshet.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="howe-sound-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/howe-sound-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/howe-sound-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/howe-sound-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="howe-sound-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/howe-sound-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/howe-sound-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/howe-sound-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="muchalat-inlet-content" class="inlet-content">
-				<h2>Muchalat Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 55 km</li>
-					<li>Maximum depth: 380 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: 50 m, located at the mouth</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/muchalat-inlet-map.gif" loading="lazy">
-				<h3>Runoff</h3>
-				<p>
-					The Gold River and its tributaries drain a 1010 km<sup>2</sup> watershed area resulting in an annual mean flow of about 90 m<sup>3</sup> s<sup>-1</sup>.
-					No estimates are available for the contribution of the other major streams around the inlet.
-					As Pickard (1963) pointed out, the discharge curve for the Gold River is bimodal: there is a broad and highly variable winter maximum in discharge followed by a secondary maximum in May and June.
-					The winter flow maximum is attributed to the seasonal precipitation maximum, and the May-June peak is attributed to melt water from the higher elevations in the water shed.
-					The lowest flows occur in August and September when precipitation is at a seasonal low and most of the snow at higher elevations has melted.
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-					Very little attention has been given to the oceanography of this west coast inlet.
-					There have been no publications on Muchalat Inlet apart from Tully's (1937) publication on the oceanography of Nootka Sound.
-					Waldichuk et al (1968) monitored the water properties in the inlet because of the discharge of pulp mill waste and Pickard (1963) conducted several oceanographic cruises to the inlet.
-					From the data that are available, the deep waters appear to be renewed in the May to September period.
-					The dissolved oxygen content of the deep water is very low at times suggesting partial renewals or long time intervals between renewals.
-				</p>
-				<h3>Time series of deep water properties<h3>
-				<div id="muchalat-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/muchalat-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/muchalat-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/muchalat-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="muchalat-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/muchalat-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/muchalat-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/muchalat-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="rivers-inlet-content" class="inlet-content">
-				<h2>Rivers Inlet</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 45 km</li>
-					<li>Maximum depth: 365 m</li>
-					<li>Major basins: one</li>
-					<li>Sill depth: 137 m</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/rivers-inlet-map.gif" loading="lazy">
-				<!-- TODO: find information for these sections
-				<h3>Runoff</h3>
-				<p>
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-				</p>
-				-->
-				<h3>Time series of deep water properties<h3>
-				<div id="rivers-inlet-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/rivers-inlet-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/rivers-inlet-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/rivers-inlet-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="rivers-inlet-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/rivers-inlet-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/rivers-inlet-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/rivers-inlet-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-			<div id="douglas-channel-content" class="inlet-content">
-				<h2>Douglas Channel</h2>
-				<h3>Physical Description</h3>
-				<ul>
-					<li>Length: 83 km</li>
-					<li>Maximum depth: 455 m</li>
-					<li>Sill depth: 200 m</li>
-				</ul>
-				<h3>Map and Section</h3>
-				<img src="figures/douglas-channel-map.gif" loading="lazy">
-				<!-- TODO: find information for these sections
-				<h3>Runoff</h3>
-				<p>
-				</p>
-				<h3>Deep water renewal process</h3>
-				<p>
-				</p>
-				-->
-				<h3>Time series of deep water properties<h3>
-				<div id="douglas-channel-monthly" class="averaging-content monthly">
-					<h4>Temperature</h4>
-					<img src="figures/douglas-channel-temperature-average.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/douglas-channel-salinity-average.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/douglas-channel-oxygen-average.png" loading="lazy">
-				</div>
-				<div id="douglas-channel-raw" class="averaging-content raw">
-					<h4>Temperature</h4>
-					<img src="figures/douglas-channel-temperature.png" loading="lazy">
-					<h4>Salinity</h4>
-					<img src="figures/douglas-channel-salinity.png" loading="lazy">
-					<h4>Dissolved Oxygen</h4>
-					<img src="figures/douglas-channel-oxygen.png" loading="lazy">
-				</div>
-			</div>
-
-		</div>
-
-		<script src="main.js"></script>
-	</body>
-</html>
+<script src="main.js"></script>

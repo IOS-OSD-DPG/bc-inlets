@@ -1,0 +1,90 @@
+- id: saanich-inlet
+  length: 24 km
+  depth: 255 m
+  basins: one
+  sill: 70 m, located at the mouth
+  surface: 65 km<sup>2</sup>
+  runoff:
+    - There are no major rivers discharging along the shores of Saanich Inlet as the total watershed area for Saanich Inlet is relatively small (~400 km<sup>2</sup>). The mean annual discharge for the Goldstream River and Shawnigan Creek combined is less than 3 m<sup>3</sup> s<sup>-1</sup> (Drinnan et al 1995). However, the Cowichan River, which discharges outside the inlet into Satellite Channel, is a significant source of freshwater (mean annual discharge ~ 50 m<sup>3</sup> s<sup>-1</sup>) in the immediate vicinity of the inlet. The local streams and the Cowichan River have the highest flow rates in the winter months and minimum during the drier summer months. Within the Georgia Basin, the Fraser River is by far the major source of freshwater. The Fraser River flow is highly seasonal and unlike the Cowichan River its peak discharge occurs in late May and June as a result of the snowmelt in the interior of the province.
+  renewal:
+    - For most of the year the deep waters are devoid of dissolved oxygen or anoxic, and hydrogen sulphide (H2S) is often detected near the bottom. In the late summer and early fall, the density of waters in Haro Strait and Satellite Channel are sufficiently high that some oxygenated waters spill into the deep basin of Saanich Inlet (Anderson and Devol 1973). The amount of renewal or replacement of the inlet deep waters varies from year to year. The details of the renewal process are controlled by the neap - spring variation in tidal mixing in the energetic tidal passages outside Saanich Inlet (Stucchi and Giovando 1984). During neap tides when tidal mixing is at a minimum, dense renewal water in Haro Strait is present at or above sill depth and able to traverse Satellite Channel and arrive at the mouth of Saanich Inlet with sufficiently high density to flow into the deep waters of the inlet. During spring tides, tidal mixing is strong and the depth of the renewal water is below that of the inlet's sill depth. Immediately after a renewal, the deep waters have low but detectable amounts of dissolved oxygen, but after a few months the deep waters return to anoxic conditions.
+  legacy: true
+
+- id: jervis-inlet
+  length: 89 km
+  depth: 670 m
+  basins: several
+  sill: outer basin - 240 m, located at mouth of inlet; inner basin - 219 m, located near Patrick Point; Princess Louisa Inlet - 6 m
+  runoff:
+    - "As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using the area of the watershed (~1400 km<sup>2</sup>) and local precipitation data. The estimated mean annual discharge of 180 m<sup>3</sup> s<sup>-1</sup> is considerably smaller than the discharge in most of the longer BC inlets. Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet. The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973)."
+  renewal:
+    - "The outer and the largest basin in Jervis Inlet has a relatively deep sill at 240 m located at the mouth of the inlet where it connects with the Strait of Georgia. The deep waters of the inlet are renewed during the 3rd and 4th quarter of the year. The timing of the deep water renewal in the inlet is consistent with the summertime renewal of the deep waters of the Strait of Georgia (Thomson 1994). Dissolved oxygen concentrations provide a good indicator of the extent of the renewal with large increases in the dissolved oxygen corresponding to large influxes of the denser water from the strait. Deep water renewal occurs annually, but in some years no increase in dissolved oxygen is observed indicating that volume of renewal water was so small that one may consider it to have been a non-renewal year."
+  legacy: true
+
+- id: bute-inlet
+  length: 75 km
+  depth: 650 m
+  basins: one
+  sill: 370 m, just outside the inlet in Calm Channel
+  runoff:
+    - "There are two main rivers that discharge into Bute Inlet, the Homathko and the Southgate, and both enter at the head of the inlet. The Homathko, the largest river, drains an interior watershed (~ 5720 km<sup>2</sup>) containing several permanent ice fields. Trites (1955) estimated the total mean annual freshwater flow into the inlet to be approximately 410 m<sup>3</sup> s<sup>-1</sup> of which 280 m<sup>3</sup> s<sup>-1</sup> is from the Homathko River. Runoff to Bute Inlet is highly seasonal, peaking in July because of snow and ice melt from the interior watershed. The lowest discharge occurs in the winter months because most of the precipitation is stored as snow in the higher elevations of the watershed."
+  renewal:
+    - "Bute Inlet is a deep inlet located amongst the narrow tidal passages at the northern end of the Strait of Georgia. The main passage for the deep waters of Bute Inlet is to the south over the very deep (370 m) sill in Calm Channel and then through Sutil Channel to the Strait of Georgia. The passages to the northern waters of Johnstone Strait and Queen Charlotte Strait are constricted and shallow. Tabata (1957) reported on the early oceanographic surveys of Bute Inlet, and later Lafond and Pickard (1975) described the deep water renewal process. Using a series of observations from 22 cruises over a two year period from 1972 to 1974 Lafond and Pickard (1975) documented several inflow events. The renewal of the deepest (&gt;400 m) waters occurs in the 3rd and 4th quarter of the year. The timing of the renewal of Bute Inlet deep waters is supported by the observed fourth quarter maximum in salinity in Sutil Channel (Pickard 1975) and consistent with the annual deep water cycle in the Strait of Georgia."
+  legacy: true
+
+- id: knight-inlet
+  length: 105 km
+  depth: 540 m
+  basins: main, deep inner basin; smaller and shallower outer basin
+  sill: inner basin - 48 m located 75 km from the head at Hoeya Head; outer basin - 60 m located at mouth of inlet
+  runoff:
+    - "There are two main rivers that discharge into Knight Inlet, the Klinaklini and Franklin, and both enter at the head of the inlet. The Klinaklini, the largest river, drains an interior watershed (~ 5780 km<sup>2</sup>) containing several permanent ice fields. Trites (1955) estimated the total mean annual freshwater flow into the inlet to be approximately 410 m<sup>3</sup> s<sup>-1</sup> of which 293 m<sup>3</sup> s<sup>-1</sup> is from the Klinaklini River. Runoff to Knight Inlet is highly seasonal, peaking in July because of snow and ice melt from the interior watershed. The lowest discharge occurs in the winter months because most of the precipitation is stored as snow in the higher elevations of the watershed."
+  renewal:
+    - "Knight Inlet has been the chosen location of many oceanographic studies. In particular, several studies have focused on the dynamics of the energetic stratified flow over the sill of Knight Inlet (Farmer and Smith 1980, Stacey and Pond 1992) and the implications for mixing and estuarine circulation (Freeland and Farmer 1980)."
+    - "Stacey (1985) briefly describes the deep water renewal cycle in both the inner and outer basins using the observations collected during the 1977 to 1979 intensive sampling period. For the larger and deeper inner basin, the renewal of the deepest waters (300 m to the bottom) begins in early summer (May-June) and continues through to late fall (October-November). The relatively high (~3 ml/l) deep water dissolved oxygen levels indicate that renewals are frequent and that a large portion of the deep waters are exchanged."
+    - "Care must be taken when interpreting the time series of deep water temperatures and salinities as there are appreciable annual signals: ~ 0.4 &deg;C for temperature and ~ 0.1 PSU for salinity (Pickard 1975)."
+  legacy: true
+
+- id: indian-arm
+  length: ~50 km
+  depth: 220 m
+  basins: one
+  sill: shallow (15 m to 25 m) and 15 km long sill region through Burrard Inlet/Vancouver Harbour
+  runoff:
+    - "Pickard (1961) lists Indian Arm as a low runoff fjord having only small rivers and streams. De Young and Pond (1988) report that the average annual freshwater flow into Indian Arm is about 42 m<sup>3</sup> s<sup>-1</sup> of which about half is discharged by the Buntzen power plant. The Indian River which is located at the head of the inlet is a relatively small river and contributes about 12 m<sup>3</sup> s<sup>-1</sup>. The Seymour and Capilano Rivers are also significant sources of freshwater that discharge 15.9 m<sup>3</sup> s<sup>-1</sup> and 19.8 m<sup>3</sup> s<sup>-1</sup> respectively into Burrard Inlet. Gilmartin (1962) describes the flow of freshwater into Indian Arm as having a bimodal cycle: a late spring to early summer peak caused by melt waters and a fall to winter peak caused by direct runoff from rainfall and regulated flow from the Buntzen power plant."
+  renewal:
+    - "De Young and Pond (1988) have studied the deep water renewal process and describe the intrusions of denser water into Indian Arm as quasi-periodic. In the years when renewals take place, they occur late in the year coincident with the timing of the highest density at 100m depth in the Strait of Georgia. Given the long and shallow sill region in Burrard Inlet, the spring-neap variations in tidal mixing over the constricted sill control the timing of the inflows of denser waters into Indian Arm. The reduced mixing during neap tides in combination with periods of low run off permit dense waters from outside to traverse the sill in Burrard Inlet with comparatively small reduction in density. During spring tides or periods of high run off the dense water from outside is vigorously mixed and its density sufficiently reduced to prevent deep water renewal in Indian Arm."
+  legacy: true
+
+- id: howe-sound
+  length: 44 km
+  depth: 285 m
+  basins: one
+  sill: 73 m, located 18 km from the head, at Defence Islands
+  runoff:
+    - Howe Sound is a high runoff fjord and receives more freshwater discharge than some of the longer and larger fjords (Bute and Knight). The Squamish River with an annual mean discharge of 300 m<sup>3</sup> s<sup>-1</sup> is the principal source of runoff to this fjord. Discharging at the head of the fjord, the Squamish River and its tributaries account for approximately two-thirds of the estimated 460 m<sup>3</sup> s<sup>-1</sup> total freshwater discharge to Howe Sound (Trites 1955). The watershed for the Squamish River and tributaries which totals about 3,600 km<sup>2</sup>, drains both interior snow and ice fields and lower elevation coastal regions. Like Knight and Bute inlets the maximum discharge occurs during the summer as the interior and higher elevation snow and ice fields melt. However, Howe Sound experiences a secondary and highly variable discharge maximum in the late fall because of precipitation falling mainly as rain. Minimum flows are in late winter and early spring when precipitation is mainly snow and is stored at the higher elevations.
+  renewal:
+    - Bell (1973) examined the deep water renewal process in Howe Sound using data collected from 1959 to 1973 and described the deep waters of Howe Sound as undergoing aperiodic renewals. Exchanges of the deepest water occur every 3 to 4 years, and the renewals occur in the winter coincident with the seasonal density maximum in the outside waters (Strait of Georgia) at sill depth. According to Bell (1973), the deepest renewals were also related to strong outflow winds (Squamish winds) associated with outbreaks of the cold air mass over the interior. Exchanges of the intermediate deep waters are more frequent and often occur in late spring and appear at times to be triggered by the Squamish River freshet.
+  legacy: true
+
+- id: muchalat-inlet
+  length: 55 km
+  depth: 380 m
+  basins: one
+  sill: 50 m, located at the mouth
+  runoff:
+    - "The Gold River and its tributaries drain a 1010 km<sup>2</sup> watershed area resulting in an annual mean flow of about 90 m<sup>3</sup> s<sup>-1</sup>. No estimates are available for the contribution of the other major streams around the inlet. As Pickard (1963) pointed out, the discharge curve for the Gold River is bimodal: there is a broad and highly variable winter maximum in discharge followed by a secondary maximum in May and June. The winter flow maximum is attributed to the seasonal precipitation maximum, and the May-June peak is attributed to melt water from the higher elevations in the water shed. The lowest flows occur in August and September when precipitation is at a seasonal low and most of the snow at higher elevations has melted."
+  renewal:
+    - "Very little attention has been given to the oceanography of this west coast inlet. There have been no publications on Muchalat Inlet apart from Tully's (1937) publication on the oceanography of Nootka Sound. Waldichuk et al (1968) monitored the water properties in the inlet because of the discharge of pulp mill waste and Pickard (1963) conducted several oceanographic cruises to the inlet. From the data that are available, the deep waters appear to be renewed in the May to September period. The dissolved oxygen content of the deep water is very low at times suggesting partial renewals or long time intervals between renewals."
+  legacy: true
+
+- id: rivers-inlet
+  length: 45 km
+  depth: 365 m
+  basins: one
+  sill: 137 m
+
+- id: douglas-channel
+  length: 83 km
+  depth: 455 m
+  sill: 200 m
