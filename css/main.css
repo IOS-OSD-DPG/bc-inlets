@@ -39,6 +39,10 @@ img {
 	object-fit: contain;
 }
 
+.map {
+	border: thin solid black;
+}
+
 .annual-plots {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
