@@ -32,7 +32,7 @@ layout: default
 </p>
 <details>
 	<summary>Click here to view map</summary>
-	<img src="https://api.mapbox.com/styles/v1/cyborgsphinx/cl0cpnth0000d15rujrameamv/static/-126,51.4,5.7/900x700?access_token=pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ" loading="lazy">
+	<img src="figures/all-inlets-map.png" class="map" loading="lazy">
 </details>
 
 <div id="averaging-choice" class="tab">
@@ -178,7 +178,7 @@ layout: default
 		{% if inlet.legacy %}
 		<img src="figures/{{ inlet.id }}-map.gif" loading="lazy">
 		{% else %}
-		<img src="figures/{{ inlet.id }}-map.png" loading="lazy">
+		<img src="figures/{{ inlet.id }}-map.png" class="map" loading="lazy">
 		<img src="figures/{{ inlet.id }}-section.png" loading="lazy">
 		{% endif %}
 		{% if inlet.runoff %}
