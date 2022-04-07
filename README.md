@@ -43,3 +43,20 @@ Once the inlet has been defined in `_data/inlets.yml`, a new tab will be generat
 - `<id>-oxygen-average.png`: the time series plot of dissolved oxygen in the inlet, to be displayed when "Monthly Averaged Time Series" is selected
 
 You should also ensure that the relevant annual averages and anomalies plots are up to date with the data from the new inlet included.
+
+Viewing Changes Locally
+-----------------------
+
+The site is generated using [Jekyll](https://jekyll.com), which is the default static site generater for [GitHub Pages](https://pages.github.com).
+Because the site is generated using templating, opening `index.html` directly in a browser is not going to produce great results, and will look nothing like the finished product.
+In order to view your changes locally, you need to install Jekyll and then run `jekyll serve` from the root of the project (the same directory as this readme).
+This will process the template and compile the site, and allow you to view it.
+
+Running `jekyll serve` should result in something like the following:
+
+	$ jekyll serve
+	...
+		Server address: http://127.0.0.1:4000
+	  Server running... press ctrl-c to stop.
+
+If you see this, just type `http://127.0.0.1:4000` into your browser and hit enter.
