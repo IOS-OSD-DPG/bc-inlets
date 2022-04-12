@@ -86,3 +86,7 @@
   length: 83 km
   depth: 455 m
   sill: 200 m
+
+- id: dean-channel
+  depth: 550 m
+  sill: 275 m
