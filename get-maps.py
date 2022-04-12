@@ -14,6 +14,7 @@ params = {
 maps = [
     ([-123.7, 48.4, -123.2, 48.8], "500x700", "Saanich Inlet"),
     ([-129.3, 53.3, -128.5, 54.1], "500x700", "Douglas Channel"),
+    ([-123.3, 49.2, -122.8, 49.5], "600x600", "Indian Arm"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
