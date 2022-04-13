@@ -90,3 +90,7 @@
 - id: dean-channel
   depth: 550 m
   sill: 275 m
+
+- id: toba-inlet
+  depth: 505 m
+  sill: 490 m

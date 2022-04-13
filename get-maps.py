@@ -16,6 +16,7 @@ maps = [
     ([-129.3, 53.3, -128.5, 54.1], "500x700", "Douglas Channel"),
     ([-123.3, 49.2, -122.8, 49.5], "600x600", "Indian Arm"),
     ([-127.5, 52.3, -126.7, 53.0], "500x700", "Dean Channel"),
+    ([-125.0, 50.3, -124.1, 50.4], "500x400", "Toba Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
