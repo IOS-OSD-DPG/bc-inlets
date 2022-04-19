@@ -156,6 +156,7 @@ layout: default
 	{% for inlet in site.data.inlets %}
 	<div id="{{ inlet.id }}-content" class="inlet-content">
 		<h2>{{ inlet.id | replace: "-", " " | capitalize }}</h2>
+		{% if inlet.length or inlet.depth or inlet.basins or inlet.sill or inlet.surface %}
 		<h3>Physical Description</h3>
 		<ul>
 			{% if inlet.length %}
@@ -174,6 +175,7 @@ layout: default
 			<li>Surface area: {{ inlet.surface }}</li>
 			{% endif %}
 		</ul>
+		{% endif %}
 		<h3>Map and Section</h3>
 		{% if inlet.legacy %}
 		<img src="figures/{{ inlet.id }}-map.gif" loading="lazy">
