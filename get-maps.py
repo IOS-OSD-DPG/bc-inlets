@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 
+import argparse
+from dataclasses import dataclass
 import json
 import os
 import requests
+from typing import List
 
 import matplotlib.pyplot as plt
 
@@ -11,13 +14,19 @@ params = {
     "access_token": "pk.eyJ1IjoiY3lib3Jnc3BoaW54IiwiYSI6ImNsMDJweTU5MTAxemozY3F4N3psem44Mm8ifQ.BCyXz0gxpY2MhF42Om1cjQ",
 }
 
+@dataclass
+class Inlet:
+    name: str
+    dimensions: str
+    boundaries: List[float]
+
 maps = [
-    ([-123.7, 48.4, -123.2, 48.8], "500x700", "Saanich Inlet"),
-    ([-129.3, 53.3, -128.5, 54.1], "500x700", "Douglas Channel"),
-    ([-123.3, 49.2, -122.8, 49.5], "600x600", "Indian Arm"),
-    ([-127.5, 52.3, -126.7, 53.0], "500x700", "Dean Channel"),
-    ([-125.0, 50.3, -124.1, 50.4], "500x400", "Toba Inlet"),
-    ([-125.3, 50.2, -124.6, 51.0], "500x700", "Bute Inlet"),
+    Inlet(boundaries=[-123.7, 48.4, -123.2, 48.8], dimensions="500x700", name="Saanich Inlet"),
+    Inlet(boundaries=[-129.3, 53.3, -128.5, 54.1], dimensions="500x700", name="Douglas Channel"),
+    Inlet(boundaries=[-123.3, 49.2, -122.8, 49.5], dimensions="600x600", name="Indian Arm"),
+    Inlet(boundaries=[-127.5, 52.3, -126.7, 53.0], dimensions="500x700", name="Dean Channel"),
+    Inlet(boundaries=[-125.0, 50.3, -124.1, 50.4], dimensions="500x400", name="Toba Inlet"),
+    Inlet(boundaries=[-125.3, 50.2, -124.6, 51.0], dimensions="500x700", name="Bute Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
@@ -74,12 +83,17 @@ def add_axes(name, position, dimensions):
     plt.tight_layout()
     plt.savefig(filename)
 
-def main():
-    get_map("cl0cpnth0000d15rujrameamv", "-126,51.4,5.7", "900x700", "all inlets")
+def main(inlet):
+    if inlet == "all":
+        get_map("cl0cpnth0000d15rujrameamv", "-126,51.4,5.7", "900x700", "all inlets")
 
     for mapbox in maps:
-        get_map("cl1gtkgu6002i14rt1l9kxo5w", mapbox[0], mapbox[1], mapbox[2], True)
-        add_axes(mapbox[2], mapbox[0], mapbox[1])
+        if inlet == "all" or inlet == mapbox.name:
+            get_map("cl1gtkgu6002i14rt1l9kxo5w", mapbox.boundaries, mapbox.dimensions, mapbox.name, True)
+            add_axes(mapbox.name, mapbox.boundaries, mapbox.dimensions)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("inlet", type=str, nargs="?", default="all")
+    args = parser.parse_args()
+    main(args.inlet)
