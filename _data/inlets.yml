@@ -73,7 +73,6 @@
     - "The Gold River and its tributaries drain a 1010 km<sup>2</sup> watershed area resulting in an annual mean flow of about 90 m<sup>3</sup> s<sup>-1</sup>. No estimates are available for the contribution of the other major streams around the inlet. As Pickard (1963) pointed out, the discharge curve for the Gold River is bimodal: there is a broad and highly variable winter maximum in discharge followed by a secondary maximum in May and June. The winter flow maximum is attributed to the seasonal precipitation maximum, and the May-June peak is attributed to melt water from the higher elevations in the water shed. The lowest flows occur in August and September when precipitation is at a seasonal low and most of the snow at higher elevations has melted."
   renewal:
     - "Very little attention has been given to the oceanography of this west coast inlet. There have been no publications on Muchalat Inlet apart from Tully's (1937) publication on the oceanography of Nootka Sound. Waldichuk et al (1968) monitored the water properties in the inlet because of the discharge of pulp mill waste and Pickard (1963) conducted several oceanographic cruises to the inlet. From the data that are available, the deep waters appear to be renewed in the May to September period. The dissolved oxygen content of the deep water is very low at times suggesting partial renewals or long time intervals between renewals."
-  legacy: true
 
 - id: rivers-inlet
   length: 45 km

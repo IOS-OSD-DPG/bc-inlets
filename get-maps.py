@@ -29,6 +29,7 @@ maps = [
     Inlet(boundaries=[-125.3, 50.2, -124.6, 51.0], dimensions="500x700", name="Bute Inlet"),
     Inlet(boundaries=[-127.9, 51.8, -127.2, 52.4], dimensions="600x600", name="Burke Channel"),
     Inlet(boundaries=[-130.2, 54.8, -129.7, 55.4], dimensions="500x700", name="Observatory Inlet"),
+    Inlet(boundaries=[-126.7, 49.5, -126.0, 49.7], dimensions="700x400", name="Muchalat Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
