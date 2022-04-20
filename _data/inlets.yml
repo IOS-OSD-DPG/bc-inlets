@@ -95,3 +95,9 @@
   sill: 490 m
 
 - id: burke-channel
+  depth: 550 m
+  sill: 43 m
+
+- id: observatory-inlet
+  depth: 530 m
+  sill: 46 m
