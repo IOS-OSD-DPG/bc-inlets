@@ -99,3 +99,15 @@
 - id: observatory-inlet
   depth: 530 m
   sill: 46 m
+
+- id: alberni-inlet
+  depth: 330 m
+  sill: 150 m
+
+- id: effingham-inlet
+  depth: 200 m
+  sill: 60 m
+
+- id: quatsino-sound
+  depth: 225 m
+  sill: 60 m
