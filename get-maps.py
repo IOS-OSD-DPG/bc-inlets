@@ -34,6 +34,7 @@ maps = [
     Inlet(boundaries=[-125.1, 48.8, -124.6, 49.3], dimensions="500x700", name="Alberni Inlet"),
     Inlet(boundaries=[-125.3, 48.9, -125.0, 49.2], dimensions="500x500", name="Effingham Inlet"),
     Inlet(boundaries=[-128.1, 50.4, -127.5, 50.6], dimensions="700x500", name="Quatsino Sound"),
+    Inlet(boundaries=[-124.4, 49.6, -123.5, 50.3], dimensions="600x700", name="Jervis Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
