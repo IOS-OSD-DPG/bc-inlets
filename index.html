@@ -138,7 +138,7 @@ layout: default
 <div id="sampling-history-content" class="averaging-content sampling">
 	<h2>Sampling Statistics</h2>
 	{% for inlet in site.data.inlets %}
-	<h3>{{ inlet.id | replace: "-", " " | capitalize }}</h3>
+	<h3>{{ inlet.id | replace: "-", " " | titlecase }}</h3>
 	<img src="figures/{{ inlet.id }}-samples.png" loading="lazy">
 	<a href="figures/{{ inlet.id }}-monthly-sampling.png">
 		<img src="figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
@@ -149,13 +149,13 @@ layout: default
 <div class="averaging-content monthly raw">
 	<div id="inlet-choice" class="tab">
 		{% for inlet in site.data.inlets %}
-		<button class="inlet-tablinks" onclick="changeInlet(event)" id="{{ inlet.id }}">{{ inlet.id | replace: "-", " " | capitalize }}</button>
+		<button class="inlet-tablinks" onclick="changeInlet(event)" id="{{ inlet.id }}">{{ inlet.id | replace: "-", " " | titlecase }}</button>
 		{% endfor %}
 	</div>
 
 	{% for inlet in site.data.inlets %}
 	<div id="{{ inlet.id }}-content" class="inlet-content">
-		<h2>{{ inlet.id | replace: "-", " " | capitalize }}</h2>
+		<h2>{{ inlet.id | replace: "-", " " | titlecase }}</h2>
 		{% if inlet.length or inlet.depth or inlet.basins or inlet.sill or inlet.surface %}
 		<h3>Physical Description</h3>
 		<ul>
