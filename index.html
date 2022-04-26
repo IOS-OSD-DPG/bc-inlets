@@ -62,7 +62,7 @@ layout: default
 
 <div id="annual-averaging-content" class="averaging-content annual">
 	<h2>Annual Averages (Salish Sea Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-annual-averages-salish-sea.png">
 			<img src="figures/deep-water-temperature-annual-averages-salish-sea.png" loading="lazy">
 		</a>
@@ -74,7 +74,7 @@ layout: default
 		</a>
 	</div>
 	<h2>Annual Averages (Central and North Coast Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-annual-averages-north-mainland-coast.png">
 			<img src="figures/deep-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
 		</a>
@@ -86,7 +86,7 @@ layout: default
 		</a>
 	</div>
 	<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png">
 			<img src="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 		</a>
@@ -98,7 +98,7 @@ layout: default
 		</a>
 	</div>
 	<h2>Annual Anomalies (Salish Sea Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-anomalies-salish-sea.png">
 			<img src="figures/deep-water-temperature-anomalies-salish-sea.png" loading="lazy">
 		</a>
@@ -110,7 +110,7 @@ layout: default
 		</a>
 	</div>
 	<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-anomalies-north-mainland-coast.png">
 			<img src="figures/deep-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
 		</a>
@@ -122,7 +122,7 @@ layout: default
 		</a>
 	</div>
 	<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
-	<div class="annual-plots">
+	<div class="grouped-plots">
 		<a href="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png">
 			<img src="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
 		</a>
@@ -197,20 +197,30 @@ layout: default
 		{% endif %}
 		<h3>Time series of deep water properties</h3>
 		<div id="{{ inlet.id }}-monthly" class="averaging-content monthly">
-			<h4>Temperature</h4>
-			<img src="figures/{{ inlet.id }}-temperature-average.png" loading="lazy">
-			<h4>Salinity</h4>
-			<img src="figures/{{ inlet.id }}-salinity-average.png" loading="lazy">
-			<h4>Dissolved Oxygen</h4>
-			<img src="figures/{{ inlet.id }}-oxygen-average.png" loading="lazy">
+			<div class="grouped-plots">
+				<a href="figures/{{ inlet.id }}-temperature-average.png">
+					<img src="figures/{{ inlet.id }}-temperature-average.png" loading="lazy">
+				</a>
+				<a href="figures/{{ inlet.id }}-salinity-average.png">
+					<img src="figures/{{ inlet.id }}-salinity-average.png" loading="lazy">
+				</a>
+				<a href="figures/{{ inlet.id }}-oxygen-average.png">
+					<img src="figures/{{ inlet.id }}-oxygen-average.png" loading="lazy">
+				</a>
+			</div>
 		</div>
 		<div id="{{ inlet.id }}-raw" class="averaging-content raw">
-			<h4>Temperature</h4>
-			<img src="figures/{{ inlet.id }}-temperature.png" loading="lazy">
-			<h4>Salinity</h4>
-			<img src="figures/{{ inlet.id }}-salinity.png" loading="lazy">
-			<h4>Dissolved Oxygen</h4>
-			<img src="figures/{{ inlet.id }}-oxygen.png" loading="lazy">
+			<div class="grouped-plots">
+				<a href="figures/{{ inlet.id }}-temperature.png" >
+					<img src="figures/{{ inlet.id }}-temperature.png" loading="lazy">
+				</a>
+				<a href="figures/{{ inlet.id }}-salinity.png" >
+					<img src="figures/{{ inlet.id }}-salinity.png" loading="lazy">
+				</a>
+				<a href="figures/{{ inlet.id }}-oxygen.png" >
+					<img src="figures/{{ inlet.id }}-oxygen.png" loading="lazy">
+				</a>
+			</div>
 		</div>
 	</div>
 	{% endfor %}

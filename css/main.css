@@ -43,7 +43,7 @@ img {
 	border: thin solid black;
 }
 
-.annual-plots {
+.grouped-plots {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
