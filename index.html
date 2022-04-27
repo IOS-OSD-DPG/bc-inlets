@@ -7,6 +7,10 @@ depths:
 averaging:
   - monthly
   - raw
+datatypes:
+  - temperature
+  - salinity
+  - dissolved-oxygen
 ---
 
 <h1>{{ page.title }}</h1>
@@ -70,85 +74,61 @@ averaging:
 	<h2>Annual Averages (Salish Sea Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-annual-averages-salish-sea.png">
-			<img src="figures/{{ depth }}-water-temperature-annual-averages-salish-sea.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-annual-averages-salish-sea.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-annual-averages-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-annual-averages-salish-sea.png">
-			<img src="figures/{{ depth }}-water-salinity-annual-averages-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-salish-sea.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<h2>Annual Averages (Central and North Coast Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-annual-averages-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-annual-averages-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-annual-averages-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-annual-averages-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (Salish Sea Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-anomalies-salish-sea.png">
-			<img src="figures/{{ depth }}-water-temperature-anomalies-salish-sea.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-anomalies-salish-sea.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-anomalies-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-anomalies-salish-sea.png">
-			<img src="figures/{{ depth }}-water-salinity-anomalies-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-salish-sea.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-anomalies-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-anomalies-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-anomalies-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-anomalies-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
 	<div class="grouped-plots">
 		{% for depth in page.depths %}
-		<a href="figures/{{ depth }}-water-temperature-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		{% for type in page.datatypes %}
+		<a href="figures/{{ depth }}-water-{{ type }}-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-{{ type }}-anomalies-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/{{ depth }}-water-salinity-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 		{% endfor %}
 	</div>
 </div>
@@ -237,15 +217,14 @@ averaging:
 		<div id="{{ inlet.id }}-{{ depth }}-{{ kind }}" class="averaging-content {{ kind }}">
 			{% capture tag %}{% if kind == "monthly" %}-average{% endif %}{% endcapture %}
 			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature{{ tag }}.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature{{ tag }}.png" loading="lazy">
+				{% for datatype in page.datatypes %}
+				{% capture type %}
+					{% if datatype == "dissolved-oxygen" %}oxygen{% else %}{{ datatype }}{% endif %}
+				{% endcapture %}
+				<a href="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity{{ tag }}.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity{{ tag }}.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen{{ tag }}.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen{{ tag }}.png" loading="lazy">
-				</a>
+				{% endfor %}
 			</div>
 		</div>
 		{% endfor %}
