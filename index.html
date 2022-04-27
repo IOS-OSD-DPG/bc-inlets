@@ -4,6 +4,9 @@ layout: default
 depths:
   - deep
   - surface
+averaging:
+  - monthly
+  - raw
 ---
 
 <h1>{{ page.title }}</h1>
@@ -230,32 +233,22 @@ depths:
 		{% endif %}
 		{% for depth in page.depths %}
 		<h3>Time series of {{ depth }} water properties</h3>
-		<div id="{{ inlet.id }}-{{ depth }}-monthly" class="averaging-content monthly">
+		{% for kind in page.averaging %}
+		<div id="{{ inlet.id }}-{{ depth }}-{{ kind }}" class="averaging-content {{ kind }}">
+			{% capture tag %}{% if kind == "monthly" %}-average{% endif %}{% endcapture %}
 			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature-average.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature{{ tag }}.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature{{ tag }}.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity-average.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity{{ tag }}.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity{{ tag }}.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen-average.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen{{ tag }}.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen{{ tag }}.png" loading="lazy">
 				</a>
 			</div>
 		</div>
-		<div id="{{ inlet.id }}-{{ depth }}-raw" class="averaging-content raw">
-			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature.png" >
-					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity.png" >
-					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen.png" >
-					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen.png" loading="lazy">
-				</a>
-			</div>
-		</div>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	{% endfor %}
