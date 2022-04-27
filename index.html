@@ -1,6 +1,9 @@
 ---
 title: Deep Water Properties for BC Inlets
 layout: default
+depths:
+  - deep
+  - surface
 ---
 
 <h1>{{ page.title }}</h1>
@@ -63,129 +66,87 @@ layout: default
 <div id="annual-averaging-content" class="averaging-content annual">
 	<h2>Annual Averages (Salish Sea Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-annual-averages-salish-sea.png">
-			<img src="figures/deep-water-temperature-annual-averages-salish-sea.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-annual-averages-salish-sea.png">
+			<img src="figures/{{ depth }}-water-temperature-annual-averages-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-annual-averages-salish-sea.png">
-			<img src="figures/deep-water-salinity-annual-averages-salish-sea.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-annual-averages-salish-sea.png">
+			<img src="figures/{{ depth }}-water-salinity-annual-averages-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png">
-			<img src="figures/deep-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-salish-sea.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-annual-averages-salish-sea.png">
-			<img src="figures/surface-water-temperature-annual-averages-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-annual-averages-salish-sea.png">
-			<img src="figures/surface-water-salinity-annual-averages-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-annual-averages-salish-sea.png">
-			<img src="figures/surface-water-dissolved-oxygen-annual-averages-salish-sea.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 	<h2>Annual Averages (Central and North Coast Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-annual-averages-north-mainland-coast.png">
-			<img src="figures/deep-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-annual-averages-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-annual-averages-north-mainland-coast.png">
-			<img src="figures/deep-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-annual-averages-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
-			<img src="figures/deep-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-annual-averages-north-mainland-coast.png">
-			<img src="figures/surface-water-temperature-annual-averages-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-annual-averages-north-mainland-coast.png">
-			<img src="figures/surface-water-salinity-annual-averages-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-annual-averages-north-mainland-coast.png">
-			<img src="figures/surface-water-dissolved-oxygen-annual-averages-north-mainland-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 	<h2>Annual Averages (West Coast Vancouver Island Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-temperature-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-salinity-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-dissolved-oxygen-annual-averages-west-vancouver-island-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (Salish Sea Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-anomalies-salish-sea.png">
-			<img src="figures/deep-water-temperature-anomalies-salish-sea.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-anomalies-salish-sea.png">
+			<img src="figures/{{ depth }}-water-temperature-anomalies-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-anomalies-salish-sea.png">
-			<img src="figures/deep-water-salinity-anomalies-salish-sea.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-anomalies-salish-sea.png">
+			<img src="figures/{{ depth }}-water-salinity-anomalies-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png">
-			<img src="figures/deep-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-salish-sea.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-anomalies-salish-sea.png">
-			<img src="figures/surface-water-temperature-anomalies-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-anomalies-salish-sea.png">
-			<img src="figures/surface-water-salinity-anomalies-salish-sea.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-anomalies-salish-sea.png">
-			<img src="figures/surface-water-dissolved-oxygen-anomalies-salish-sea.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (Central and North Coast Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-anomalies-north-mainland-coast.png">
-			<img src="figures/deep-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-anomalies-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-anomalies-north-mainland-coast.png">
-			<img src="figures/deep-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-anomalies-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
-			<img src="figures/deep-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-anomalies-north-mainland-coast.png">
-			<img src="figures/surface-water-temperature-anomalies-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-anomalies-north-mainland-coast.png">
-			<img src="figures/surface-water-salinity-anomalies-north-mainland-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-anomalies-north-mainland-coast.png">
-			<img src="figures/surface-water-dissolved-oxygen-anomalies-north-mainland-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 	<h2>Annual Anomalies (West Coast Vancouver Island Inlets)</h2>
 	<div class="grouped-plots">
-		<a href="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		{% for depth in page.depths %}
+		<a href="figures/{{ depth }}-water-temperature-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-salinity-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/deep-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
+		<a href="figures/{{ depth }}-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
+			<img src="figures/{{ depth }}-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
 		</a>
-		<a href="figures/surface-water-temperature-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-temperature-anomalies-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-salinity-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-salinity-anomalies-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		<a href="figures/surface-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png">
-			<img src="figures/surface-water-dissolved-oxygen-anomalies-west-vancouver-island-coast.png" loading="lazy">
-		</a>
+		{% endfor %}
 	</div>
 </div>
 
@@ -267,60 +228,35 @@ layout: default
 		<p>{{ renewal }}</p>
 		{% endfor %}
 		{% endif %}
-		<h3>Time series of deep water properties</h3>
-		<div id="{{ inlet.id }}-deep-monthly" class="averaging-content monthly">
+		{% for depth in page.depths %}
+		<h3>Time series of {{ depth }} water properties</h3>
+		<div id="{{ inlet.id }}-{{ depth }}-monthly" class="averaging-content monthly">
 			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-deep-temperature-average.png">
-					<img src="figures/{{ inlet.id }}-deep-temperature-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature-average.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature-average.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-deep-salinity-average.png">
-					<img src="figures/{{ inlet.id }}-deep-salinity-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity-average.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity-average.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-deep-oxygen-average.png">
-					<img src="figures/{{ inlet.id }}-deep-oxygen-average.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen-average.png">
+					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen-average.png" loading="lazy">
 				</a>
 			</div>
 		</div>
-		<div id="{{ inlet.id }}-deep-raw" class="averaging-content raw">
+		<div id="{{ inlet.id }}-{{ depth }}-raw" class="averaging-content raw">
 			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-deep-temperature.png" >
-					<img src="figures/{{ inlet.id }}-deep-temperature.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-temperature.png" >
+					<img src="figures/{{ inlet.id }}-{{ depth }}-temperature.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-deep-salinity.png" >
-					<img src="figures/{{ inlet.id }}-deep-salinity.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-salinity.png" >
+					<img src="figures/{{ inlet.id }}-{{ depth }}-salinity.png" loading="lazy">
 				</a>
-				<a href="figures/{{ inlet.id }}-deep-oxygen.png" >
-					<img src="figures/{{ inlet.id }}-deep-oxygen.png" loading="lazy">
+				<a href="figures/{{ inlet.id }}-{{ depth }}-oxygen.png" >
+					<img src="figures/{{ inlet.id }}-{{ depth }}-oxygen.png" loading="lazy">
 				</a>
 			</div>
 		</div>
-		<h3>Time series of surface water properties</h3>
-		<div id="{{ inlet.id }}-surface-monthly" class="averaging-content monthly">
-			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-surface-temperature-average.png">
-					<img src="figures/{{ inlet.id }}-surface-temperature-average.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-surface-salinity-average.png">
-					<img src="figures/{{ inlet.id }}-surface-salinity-average.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-surface-oxygen-average.png">
-					<img src="figures/{{ inlet.id }}-surface-oxygen-average.png" loading="lazy">
-				</a>
-			</div>
-		</div>
-		<div id="{{ inlet.id }}-surface-raw" class="averaging-content raw">
-			<div class="grouped-plots">
-				<a href="figures/{{ inlet.id }}-surface-temperature.png" >
-					<img src="figures/{{ inlet.id }}-surface-temperature.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-surface-salinity.png" >
-					<img src="figures/{{ inlet.id }}-surface-salinity.png" loading="lazy">
-				</a>
-				<a href="figures/{{ inlet.id }}-surface-oxygen.png" >
-					<img src="figures/{{ inlet.id }}-surface-oxygen.png" loading="lazy">
-				</a>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 	{% endfor %}
 
