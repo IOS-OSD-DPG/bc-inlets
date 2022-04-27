@@ -35,6 +35,7 @@ maps = [
     Inlet(boundaries=[-125.3, 48.9, -125.0, 49.2], dimensions="500x500", name="Effingham Inlet"),
     Inlet(boundaries=[-128.1, 50.4, -127.5, 50.6], dimensions="700x500", name="Quatsino Sound"),
     Inlet(boundaries=[-124.4, 49.6, -123.5, 50.3], dimensions="600x700", name="Jervis Inlet"),
+    Inlet(boundaries=[-131.8, 52.4, -131.0, 53.0], dimensions="600x600", name="Juan Perez Sound"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
@@ -93,7 +94,7 @@ def add_axes(name, position, dimensions):
 
 def main(inlet):
     if inlet == "all":
-        get_map("cl0cpnth0000d15rujrameamv", "-126,51.4,5.7", "900x700", "all inlets")
+        get_map("cl0cpnth0000d15rujrameamv", "-126,51.9,5.4", "900x700", "all inlets")
 
     for mapbox in maps:
         if inlet == "all" or inlet == mapbox.name:

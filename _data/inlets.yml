@@ -110,3 +110,7 @@
 - id: quatsino-sound
   depth: 225 m
   sill: 60 m
+
+- id: juan-perez-sound
+  depth: 330 m
+  sill: 80 m
