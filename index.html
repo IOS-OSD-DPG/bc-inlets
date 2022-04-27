@@ -14,6 +14,11 @@ datatypes:
   - temperature
   - salinity
   - dissolved-oxygen
+areas:
+  - salish-sea
+  - north-mainland-coast
+  - west-vancouver-island-coast
+  - haida-gwaii
 ---
 
 <h1>{{ page.title }}</h1>
@@ -78,36 +83,30 @@ datatypes:
   {% capture tag %}
     {% if kind == "averages" %}annual-averages{% else %}{{ kind }}{% endif %}
   {% endcapture %}
-  <h2>Annual {{ kind | capitalize }} (Salish Sea Inlets)</h2>
+  {% for area in page.areas %}
+  {% capture title %}
+    {% case area %}
+      {% when "salish-sea" %}
+      Salish Sea Inlets
+      {% when "north-mainland-coast" %}
+      Central and North Coast Inlets
+      {% when "west-vancouver-island-coast" %}
+      West Coast Vancouver Island Inlets
+      {% when "haida-gwaii" %}
+      Haida Gwaii
+    {% endcase %}
+  {% endcapture %}
+  <h2>Annual {{ kind | capitalize }} ({{ title | strip }})</h2>
   <div class="grouped-plots">
     {% for depth in page.depths %}
     {% for type in page.datatypes %}
-    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png">
-      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png" loading="lazy">
+    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png">
+      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png" loading="lazy">
     </a>
     {% endfor %}
     {% endfor %}
   </div>
-  <h2>Annual {{ kind | capitalize }} (Central and North Coast Inlets)</h2>
-  <div class="grouped-plots">
-    {% for depth in page.depths %}
-    {% for type in page.datatypes %}
-    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png">
-      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png" loading="lazy">
-    </a>
-    {% endfor %}
-    {% endfor %}
-  </div>
-  <h2>Annual {{ kind | capitalize }} (West Coast Vancouver Island Inlets)</h2>
-  <div class="grouped-plots">
-    {% for depth in page.depths %}
-    {% for type in page.datatypes %}
-    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png">
-      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png" loading="lazy">
-    </a>
-    {% endfor %}
-    {% endfor %}
-  </div>
+  {% endfor %}
   {% endfor %}
 </div>
 
@@ -199,8 +198,8 @@ datatypes:
         {% capture type %}
           {% if datatype == "dissolved-oxygen" %}oxygen{% else %}{{ datatype }}{% endif %}
         {% endcapture %}
-        <a href="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png">
-          <img src="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png" loading="lazy">
+        <a href="figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png">
+          <img src="figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png" loading="lazy">
         </a>
         {% endfor %}
       </div>
