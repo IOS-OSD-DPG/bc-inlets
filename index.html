@@ -18,197 +18,197 @@ datatypes:
 
 <h1>{{ page.title }}</h1>
 <p>
-	The deep waters of inlets, i.e. those waters trapped behind the inlet's sill, are usually quiescent. Isolated from the annual and higher frequency variations present in the near surface waters, the deep waters provide a good sampling location for observing the long term changes in water properties (temperature, salinity, and dissolved oxygen).
-	The deep water chronicle the temperature, salinity, and dissolved oxygen properties of the outside waters.
+  The deep waters of inlets, i.e. those waters trapped behind the inlet's sill, are usually quiescent. Isolated from the annual and higher frequency variations present in the near surface waters, the deep waters provide a good sampling location for observing the long term changes in water properties (temperature, salinity, and dissolved oxygen).
+  The deep water chronicle the temperature, salinity, and dissolved oxygen properties of the outside waters.
 </p>
 <p>
-	The almost 70 year long time series of water properties from some inlets, more than 90 years in the case of Saanich Inlet, are potentially rich sources of information about our coastal environment and how it has changed in the last half century.
-	This page presents the annual and monthly time series of deep water properties from the major BC inlets (Salish Sea Inlets - Saanich, Indian Arm, Howe Sound, Toba, and Jervis; Central and North Coast Inlets - Observatory, Douglas Channel, Dean, Burk, Rivers, Knight, and Bute; West Coast Vancouver Island Inlets - Muchalat, Alberni, Effingham, Neroutsos, Rupert-Holberg).
-	The page also provides basic physical, hydrologic, and oceanographic information for these inlets.
+  The almost 70 year long time series of water properties from some inlets, more than 90 years in the case of Saanich Inlet, are potentially rich sources of information about our coastal environment and how it has changed in the last half century.
+  This page presents the annual and monthly time series of deep water properties from the major BC inlets (Salish Sea Inlets - Saanich, Indian Arm, Howe Sound, Toba, and Jervis; Central and North Coast Inlets - Observatory, Douglas Channel, Dean, Burk, Rivers, Knight, and Bute; West Coast Vancouver Island Inlets - Muchalat, Alberni, Effingham, Neroutsos, Rupert-Holberg).
+  The page also provides basic physical, hydrologic, and oceanographic information for these inlets.
 </p>
 <h2>Background</h2>
 <p>
-	Dr. George Pickard of the Institute of Oceanography at the University of British Columbia (UBC) initiated in 1951, and conducted for many years, a series of inlet cruises.
-	The inlet cruises, conducted mostly in the summer, were used for studies of the BC fjords and also served as training exercises for oceanography students.
-	Students obtained and analyzed water samples for temperature, salinity, and dissolved oxygen in many fjords, straits, passages, and channels on the entire BC coast.
-	The data set is a remarkably long (~70 years), high quality time series that spans the entire length of the mainland coast and Vancouver Island.
+  Dr. George Pickard of the Institute of Oceanography at the University of British Columbia (UBC) initiated in 1951, and conducted for many years, a series of inlet cruises.
+  The inlet cruises, conducted mostly in the summer, were used for studies of the BC fjords and also served as training exercises for oceanography students.
+  Students obtained and analyzed water samples for temperature, salinity, and dissolved oxygen in many fjords, straits, passages, and channels on the entire BC coast.
+  The data set is a remarkably long (~70 years), high quality time series that spans the entire length of the mainland coast and Vancouver Island.
 </p>
 <p>
-	Several other researchers, notably Drs. John Tully and Mike Waldichuk, also conducted sampling programs in several BC inlets.
-	Dr. Tully's work extends back to the 1930's, and Dr. Waldichuk conducted several pollution cruises in the 60's and 70's to inlets where there were pulp mills. From the mid 1980's to the late 2000's, the fjord research at the Institute of Ocean Sciences (IOS) had provided extensive sets of observations from several fjords, in particular Knight, Saanich, and Alberni Inlets.
-	All of the IOS data sets and most, but not all, of the early inlet and coastal water surveys are now preserved in digital form in the IOS data archive.
+  Several other researchers, notably Drs. John Tully and Mike Waldichuk, also conducted sampling programs in several BC inlets.
+  Dr. Tully's work extends back to the 1930's, and Dr. Waldichuk conducted several pollution cruises in the 60's and 70's to inlets where there were pulp mills. From the mid 1980's to the late 2000's, the fjord research at the Institute of Ocean Sciences (IOS) had provided extensive sets of observations from several fjords, in particular Knight, Saanich, and Alberni Inlets.
+  All of the IOS data sets and most, but not all, of the early inlet and coastal water surveys are now preserved in digital form in the IOS data archive.
 </p>
 <p id="source-description">
-	Data is taken from the archive at <a href="https://www.waterproperties.org/osd_data_archive">waterproperties.ca</a> and
-	<a href="https://catalogue.cioos.ca/dataset/f239e86c-38d1-4fb2-8b17-acaed794221c">Hakai Water Properties Vertical Profile Data Measures by Oceanographic Profilers, Provisional</a>.
-	This is a mix of netCDF, IOS Shell, and CSV files.
+  Data is taken from the archive at <a href="https://www.waterproperties.org/osd_data_archive">waterproperties.ca</a> and
+  <a href="https://catalogue.cioos.ca/dataset/f239e86c-38d1-4fb2-8b17-acaed794221c">Hakai Water Properties Vertical Profile Data Measures by Oceanographic Profilers, Provisional</a>.
+  This is a mix of netCDF, IOS Shell, and CSV files.
 </p>
 <details>
-	<summary>Click here to view map</summary>
-	<img src="figures/all-inlets-map.png" class="map" loading="lazy">
+  <summary>Click here to view map</summary>
+  <img src="figures/all-inlets-map.png" class="map" loading="lazy">
 </details>
 
 <div id="averaging-choice" class="tab">
-	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="annual">Annual Averages &amp; Anomalies Time Series</button>
-	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="monthly" id="averaging-default">Monthly Averaged Time Series</button>
-	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="raw">Raw Data</button>
-	<button class="averaging-tablinks" onclick="changeAveraging(event)" id="sampling">Sampling Statistics</button>
+  <button class="averaging-tablinks" onclick="changeAveraging(event)" id="annual">Annual Averages &amp; Anomalies Time Series</button>
+  <button class="averaging-tablinks" onclick="changeAveraging(event)" id="monthly" id="averaging-default">Monthly Averaged Time Series</button>
+  <button class="averaging-tablinks" onclick="changeAveraging(event)" id="raw">Raw Data</button>
+  <button class="averaging-tablinks" onclick="changeAveraging(event)" id="sampling">Sampling Statistics</button>
 </div>
 <p id="monthly-description" class="averaging-content monthly">
-	Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
-	Monthly averages time series of temperature, salinity, and dissolved oxygen for individual inlets are shown below.
+  Arithmetic means of deep water properties were calculated for each data file/profile over predefined depth intervals, and then across each month for monthly averages.
+  Monthly averages time series of temperature, salinity, and dissolved oxygen for individual inlets are shown below.
 </p>
 <p id="raw-description" class="averaging-content raw">
-	Data is not averaged. All data found is shown, coloured according to its depth.
+  Data is not averaged. All data found is shown, coloured according to its depth.
 </p>
 <p id="annual-description" class="averaging-content annual">
-	Annual averages and anomalies time series of deep water properties facilitate the comparison of deep water variations among the inlets.
-	For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
-	Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
-	Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
+  Annual averages and anomalies time series of deep water properties facilitate the comparison of deep water variations among the inlets.
+  For individual inlets, arithmetic means of deep water properties were calculated for each data file/profile, each month, and then each year for annual averages.
+  Annual anomalies were calculated as the departure of the annually averages deep water property from the mean of the time series from the start year of the time series to the present.
+  Annual averages and anomalies for temperature, salinity, and dissolved oxygen are shown below.
 </p>
 <p id="sampling-description" class="averaging-content sampling">
-	The sampling statistics of major BC inlets were investigated before constructing the time series of deep water properties to help understand the number of samples and profiles collected and sampling frequency on annual and monthly scales.
-	The data archives of Ocean Sciences, Hakai Institute, and Ocean Networks Canada have been searched for all data holdings in the geographical area corresponding to the major inlets of the BC coast.
-	The data holdings from individual inlets were summarized by the time in the form of 1. sampling histograms depicting the length of the time series and number of samples per year and 2. sampling heat maps display the number of samples per month.
+  The sampling statistics of major BC inlets were investigated before constructing the time series of deep water properties to help understand the number of samples and profiles collected and sampling frequency on annual and monthly scales.
+  The data archives of Ocean Sciences, Hakai Institute, and Ocean Networks Canada have been searched for all data holdings in the geographical area corresponding to the major inlets of the BC coast.
+  The data holdings from individual inlets were summarized by the time in the form of 1. sampling histograms depicting the length of the time series and number of samples per year and 2. sampling heat maps display the number of samples per month.
 </p>
 
 <div id="annual-averaging-content" class="averaging-content annual">
-	{% for kind in page.annual %}
-	{% capture tag %}
-		{% if kind == "averages" %}annual-averages{% else %}{{ kind }}{% endif %}
-	{% endcapture %}
-	<h2>Annual {{ kind | capitalize }} (Salish Sea Inlets)</h2>
-	<div class="grouped-plots">
-		{% for depth in page.depths %}
-		{% for type in page.datatypes %}
-		<a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png">
-			<img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png" loading="lazy">
-		</a>
-		{% endfor %}
-		{% endfor %}
-	</div>
-	<h2>Annual {{ kind | capitalize }} (Central and North Coast Inlets)</h2>
-	<div class="grouped-plots">
-		{% for depth in page.depths %}
-		{% for type in page.datatypes %}
-		<a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png">
-			<img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png" loading="lazy">
-		</a>
-		{% endfor %}
-		{% endfor %}
-	</div>
-	<h2>Annual {{ kind | capitalize }} (West Coast Vancouver Island Inlets)</h2>
-	<div class="grouped-plots">
-		{% for depth in page.depths %}
-		{% for type in page.datatypes %}
-		<a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png">
-			<img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png" loading="lazy">
-		</a>
-		{% endfor %}
-		{% endfor %}
-	</div>
-	{% endfor %}
+  {% for kind in page.annual %}
+  {% capture tag %}
+    {% if kind == "averages" %}annual-averages{% else %}{{ kind }}{% endif %}
+  {% endcapture %}
+  <h2>Annual {{ kind | capitalize }} (Salish Sea Inlets)</h2>
+  <div class="grouped-plots">
+    {% for depth in page.depths %}
+    {% for type in page.datatypes %}
+    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png">
+      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-salish-sea.png" loading="lazy">
+    </a>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  <h2>Annual {{ kind | capitalize }} (Central and North Coast Inlets)</h2>
+  <div class="grouped-plots">
+    {% for depth in page.depths %}
+    {% for type in page.datatypes %}
+    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png">
+      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-north-mainland-coast.png" loading="lazy">
+    </a>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  <h2>Annual {{ kind | capitalize }} (West Coast Vancouver Island Inlets)</h2>
+  <div class="grouped-plots">
+    {% for depth in page.depths %}
+    {% for type in page.datatypes %}
+    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png">
+      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag }}-west-vancouver-island-coast.png" loading="lazy">
+    </a>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
 
 <div id="sampling-history-content" class="averaging-content sampling">
-	<h2>Sampling Statistics</h2>
-	{% for inlet in site.data.inlets %}
-	{% assign words = inlet.id | split: "-" %}
-	{% capture name %}
-		{% for word in words %}
-			{{ word | capitalize }}
-		{% endfor %}
-	{% endcapture %}
-	<h3>{{ name }}</h3>
-	<img src="figures/{{ inlet.id }}-samples.png" loading="lazy">
-	<a href="figures/{{ inlet.id }}-monthly-sampling.png">
-		<img src="figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
-	</a>
-	{% endfor %}
+  <h2>Sampling Statistics</h2>
+  {% for inlet in site.data.inlets %}
+  {% assign words = inlet.id | split: "-" %}
+  {% capture name %}
+    {% for word in words %}
+      {{ word | capitalize }}
+    {% endfor %}
+  {% endcapture %}
+  <h3>{{ name }}</h3>
+  <img src="figures/{{ inlet.id }}-samples.png" loading="lazy">
+  <a href="figures/{{ inlet.id }}-monthly-sampling.png">
+    <img src="figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
+  </a>
+  {% endfor %}
 </div>
 
 <div class="averaging-content monthly raw">
-	<div id="inlet-choice" class="tab">
-		{% for inlet in site.data.inlets %}
-		{% assign words = inlet.id | split: "-" %}
-		{% capture name %}
-			{% for word in words %}
-				{{ word | capitalize }}
-			{% endfor %}
-		{% endcapture %}
-		<button class="inlet-tablinks" onclick="changeInlet(event)" id="{{ inlet.id }}">{{ name }}</button>
-		{% endfor %}
-	</div>
+  <div id="inlet-choice" class="tab">
+    {% for inlet in site.data.inlets %}
+    {% assign words = inlet.id | split: "-" %}
+    {% capture name %}
+      {% for word in words %}
+        {{ word | capitalize }}
+      {% endfor %}
+    {% endcapture %}
+    <button class="inlet-tablinks" onclick="changeInlet(event)" id="{{ inlet.id }}">{{ name }}</button>
+    {% endfor %}
+  </div>
 
-	{% for inlet in site.data.inlets %}
-	{% assign words = inlet.id | split: "-" %}
-	{% capture name %}
-		{% for word in words %}
-			{{ word | capitalize }}
-		{% endfor %}
-	{% endcapture %}
-	<div id="{{ inlet.id }}-content" class="inlet-content">
-		<h2>{{ name }}</h2>
-		{% if inlet.length or inlet.depth or inlet.basins or inlet.sill or inlet.surface %}
-		<h3>Physical Description</h3>
-		<ul>
-			{% if inlet.length %}
-			<li>Length: {{ inlet.length }}</li>
-			{% endif %}
-			{% if inlet.depth %}
-			<li>Maximum depth: {{ inlet.depth }}</li>
-			{% endif %}
-			{% if inlet.basins %}
-			<li>Major basins: {{ inlet.basins }}</li>
-			{% endif %}
-			{% if inlet.sill %}
-			<li>Sill depth: {{ inlet.sill }}</li>
-			{% endif %}
-			{% if inlet.surface %}
-			<li>Surface area: {{ inlet.surface }}</li>
-			{% endif %}
-		</ul>
-		{% endif %}
-		<h3>Map and Section</h3>
-		{% if inlet.legacy %}
-		<img src="figures/{{ inlet.id }}-map.gif" loading="lazy">
-		{% else %}
-		<img src="figures/{{ inlet.id }}-map.png" loading="lazy">
-		<img src="figures/{{ inlet.id }}-section.png" loading="lazy">
-		{% endif %}
-		{% if inlet.runoff %}
-		<h3>Runoff</h3>
-		{% for runoff in inlet.runoff %}
-		<p>{{ runoff }}</p>
-		{% endfor %}
-		{% endif %}
-		{% if inlet.renewal %}
-		<h3>Deep water renewal process</h3>
-		{% for renewal in inlet.renewal %}
-		<p>{{ renewal }}</p>
-		{% endfor %}
-		{% endif %}
-		{% for depth in page.depths %}
-		<h3>Time series of {{ depth }} water properties</h3>
-		{% for kind in page.averaging %}
-		<div id="{{ inlet.id }}-{{ depth }}-{{ kind }}" class="averaging-content {{ kind }}">
-			{% capture tag %}{% if kind == "monthly" %}-average{% endif %}{% endcapture %}
-			<div class="grouped-plots">
-				{% for datatype in page.datatypes %}
-				{% capture type %}
-					{% if datatype == "dissolved-oxygen" %}oxygen{% else %}{{ datatype }}{% endif %}
-				{% endcapture %}
-				<a href="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png">
-					<img src="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png" loading="lazy">
-				</a>
-				{% endfor %}
-			</div>
-		</div>
-		{% endfor %}
-		{% endfor %}
-	</div>
-	{% endfor %}
+  {% for inlet in site.data.inlets %}
+  {% assign words = inlet.id | split: "-" %}
+  {% capture name %}
+    {% for word in words %}
+      {{ word | capitalize }}
+    {% endfor %}
+  {% endcapture %}
+  <div id="{{ inlet.id }}-content" class="inlet-content">
+    <h2>{{ name }}</h2>
+    {% if inlet.length or inlet.depth or inlet.basins or inlet.sill or inlet.surface %}
+    <h3>Physical Description</h3>
+    <ul>
+      {% if inlet.length %}
+      <li>Length: {{ inlet.length }}</li>
+      {% endif %}
+      {% if inlet.depth %}
+      <li>Maximum depth: {{ inlet.depth }}</li>
+      {% endif %}
+      {% if inlet.basins %}
+      <li>Major basins: {{ inlet.basins }}</li>
+      {% endif %}
+      {% if inlet.sill %}
+      <li>Sill depth: {{ inlet.sill }}</li>
+      {% endif %}
+      {% if inlet.surface %}
+      <li>Surface area: {{ inlet.surface }}</li>
+      {% endif %}
+    </ul>
+    {% endif %}
+    <h3>Map and Section</h3>
+    {% if inlet.legacy %}
+    <img src="figures/{{ inlet.id }}-map.gif" loading="lazy">
+    {% else %}
+    <img src="figures/{{ inlet.id }}-map.png" loading="lazy">
+    <img src="figures/{{ inlet.id }}-section.png" loading="lazy">
+    {% endif %}
+    {% if inlet.runoff %}
+    <h3>Runoff</h3>
+    {% for runoff in inlet.runoff %}
+    <p>{{ runoff }}</p>
+    {% endfor %}
+    {% endif %}
+    {% if inlet.renewal %}
+    <h3>Deep water renewal process</h3>
+    {% for renewal in inlet.renewal %}
+    <p>{{ renewal }}</p>
+    {% endfor %}
+    {% endif %}
+    {% for depth in page.depths %}
+    <h3>Time series of {{ depth }} water properties</h3>
+    {% for kind in page.averaging %}
+    <div id="{{ inlet.id }}-{{ depth }}-{{ kind }}" class="averaging-content {{ kind }}">
+      {% capture tag %}{% if kind == "monthly" %}-average{% endif %}{% endcapture %}
+      <div class="grouped-plots">
+        {% for datatype in page.datatypes %}
+        {% capture type %}
+          {% if datatype == "dissolved-oxygen" %}oxygen{% else %}{{ datatype }}{% endif %}
+        {% endcapture %}
+        <a href="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png">
+          <img src="figures/{{ inlet.id }}-{{ depth }}-{{ type }}{{ tag }}.png" loading="lazy">
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor %}
 
 </div>
 
