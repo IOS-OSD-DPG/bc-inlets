@@ -37,6 +37,7 @@ maps = [
     Inlet(boundaries=[-124.4, 49.6, -123.5, 50.3], dimensions="600x700", name="Jervis Inlet"),
     Inlet(boundaries=[-131.8, 52.4, -131.0, 53.0], dimensions="600x600", name="Juan Perez Sound"),
     Inlet(boundaries=[-126.8, 50.4, -125.4, 51.2], dimensions="600x600", name="Knight Inlet"),
+    Inlet(boundaries=[-127.9, 51.3, -126.5, 51.9], dimensions="700x500", name="Rivers Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
@@ -93,17 +94,19 @@ def add_axes(name, position, dimensions):
     plt.tight_layout()
     plt.savefig(filename)
 
-def main(inlet):
-    if inlet == "all":
+def main(inlet, only_update):
+    if not only_update and inlet == "all":
         get_map("cl0cpnth0000d15rujrameamv", "-126,51.9,5.4", "900x700", "all inlets")
 
     for mapbox in maps:
         if inlet == "all" or inlet == mapbox.name:
-            get_map("cl1gtkgu6002i14rt1l9kxo5w", mapbox.boundaries, mapbox.dimensions, mapbox.name, True)
+            if not only_update:
+                get_map("cl1gtkgu6002i14rt1l9kxo5w", mapbox.boundaries, mapbox.dimensions, mapbox.name, True)
             add_axes(mapbox.name, mapbox.boundaries, mapbox.dimensions)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("inlet", type=str, nargs="?", default="all")
+    parser.add_argument("--update", action="store_true")
     args = parser.parse_args()
-    main(args.inlet)
+    main(args.inlet, args.inlet)
