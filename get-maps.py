@@ -36,6 +36,7 @@ maps = [
     Inlet(boundaries=[-128.1, 50.4, -127.5, 50.6], dimensions="700x500", name="Quatsino Sound"),
     Inlet(boundaries=[-124.4, 49.6, -123.5, 50.3], dimensions="600x700", name="Jervis Inlet"),
     Inlet(boundaries=[-131.8, 52.4, -131.0, 53.0], dimensions="600x600", name="Juan Perez Sound"),
+    Inlet(boundaries=[-126.8, 50.4, -125.4, 51.2], dimensions="600x600", name="Knight Inlet"),
 ]
 
 mapbox_url = "https://api.mapbox.com/styles/v1/cyborgsphinx/{}/static/{}/{}"
