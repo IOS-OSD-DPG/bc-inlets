@@ -25,16 +25,13 @@ Entries are defined as follows:
 - surface: the surface area of the inlet
 - runoff: a series of paragraphs describing the runoff process for the inlet
 - renewal: a series of paragraphs describing the deep water renewal process for the inlet
-- legacy: a flag to indicate whether to use the old-style map and section plot combined into one image, or a newer version with two separate images. `true` means to use the old style
 
 `length`, `depth`, `basins`, `sill`, `surface`, `runoff`, and `renewal` are all optional, and their sections will not show up if they aren't defined.
-`legacy` defaults to `false` if it is not present.
 
 Once the inlet has been defined in `_data/inlets.yml`, a new tab will be generated using that information which will look for the following images in the `figures/` directory:
 - `<id>-samples.png`: the sampling histogram
 - `<id>-monthly-sampling.png`: the sampling heatmap
-- `<id>-map.gif` if `legacy` is `true`: the combined map and section plot
-- `<id>-map.png` and `<id>-section.png` if `legacy` is `false` or not defined: the map and section plots
+- `<id>-map.png` and `<id>-section.png`: the map and section plots
 - `<id>-temperature.png`: the time series plot of temperature in the inlet, to be displayed when "Raw Data" is selected
 - `<id>-salinity.png`: the time series plot of salinity in the inlet, to be displayed when "Raw Data" is selected
 - `<id>-oxygen.png`: the time series plot of dissolved oxygen in the inlet, to be displayed when "Raw Data" is selected
