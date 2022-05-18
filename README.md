@@ -57,3 +57,13 @@ Running `jekyll serve` should result in something like the following:
 	  Server running... press ctrl-c to stop.
 
 If you see this, just type `http://127.0.0.1:4000` into your browser and hit enter.
+
+The images have recently been moved to another server to facilitate automated updating.
+In order to view the images instead of broken links, you will need to do a few things:
+
+1. Gather the relevant files into a single directory on your computer
+1. Either move or link that directory to a subdirectory of this repository, e.g. `figures`
+1. Change the `imageprefix` line in between the `---` lines at the top of `index.html` to the name of the subdirectory from the previous step
+1. Run `jekyll serve` as described above
+
+The site should now display the images properly.
