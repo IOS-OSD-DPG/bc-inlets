@@ -49,7 +49,7 @@ areas:
 </p>
 <details>
   <summary>Click here to view map</summary>
-  <img src="figures/all-inlets-map.png" class="map" loading="lazy">
+  <img src="https://www.waterproperties.ca/bc-inlets/figures/all-inlets-map.png" class="map" loading="lazy">
   <p>
     The maps on this page were generated using <a href="https://www.mapbox.com">Mapbox Studio</a>.
   </p>
@@ -102,8 +102,8 @@ areas:
   <div class="grouped-plots">
     {% for depth in page.depths %}
     {% for type in page.datatypes %}
-    <a href="figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png">
-      <img src="figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png" loading="lazy">
+    <a href="https://www.waterproperties.ca/bc-inlets/figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png">
+      <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ depth }}-water-{{ type }}-{{ tag | strip }}-{{ area }}.png" loading="lazy">
     </a>
     {% endfor %}
     {% endfor %}
@@ -122,9 +122,9 @@ areas:
     {% endfor %}
   {% endcapture %}
   <h3>{{ name }}</h3>
-  <img src="figures/{{ inlet.id }}-samples.png" loading="lazy">
-  <a href="figures/{{ inlet.id }}-monthly-sampling.png">
-    <img src="figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
+  <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-samples.png" loading="lazy">
+  <a href="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-monthly-sampling.png">
+    <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-monthly-sampling.png" loading="lazy">
   </a>
   {% endfor %}
 </div>
@@ -172,8 +172,8 @@ areas:
     </ul>
     {% endif %}
     <h3>Map and Section</h3>
-    <img src="figures/{{ inlet.id }}-map.png" loading="lazy">
-    <img src="figures/{{ inlet.id }}-section.png" loading="lazy">
+    <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-map.png" loading="lazy">
+    <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-section.png" loading="lazy">
     {% if inlet.runoff %}
     <h3>Runoff</h3>
     {% for runoff in inlet.runoff %}
@@ -196,8 +196,8 @@ areas:
         {% capture type %}
           {% if datatype == "dissolved-oxygen" %}oxygen{% else %}{{ datatype }}{% endif %}
         {% endcapture %}
-        <a href="figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png">
-          <img src="figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png" loading="lazy">
+        <a href="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png">
+          <img src="https://www.waterproperties.ca/bc-inlets/figures/{{ inlet.id }}-{{ depth }}-{{ type | strip }}{{ tag }}.png" loading="lazy">
         </a>
         {% endfor %}
       </div>
