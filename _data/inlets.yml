@@ -76,6 +76,10 @@
   depth: 365 m
   basins: one
   sill: 137 m
+  runoff:
+    - The primary source of freshwater inflow into Rivers Inlet comes from Owikeno Lake by way of the Wannock River at the head of the inlet. Owikeno Lake represents an interior watershed of about 3970 km<sup>2</sup>, representing about 65% of the total freshwater contribution to the inlet (Hodal 2010). The flow from the Wannock River represents an annual mean of about 320 m<sup>3</sup> s<sup>-1</sup>, peaking in the spring and summer months (Hodal 2010). Contributions from Kibella Bay and the lower sources closer to the mouth are not as well studied.
+  renewal:
+    - Hodal (2010) provides a summary of the deep water renewal process, which happens yearly during the summer. The data used for this description is from a study performed from 2008 to 2009. The process itself is similar to Saanich Inlet and Knight Inlet (Hodal 2010).
 
 - id: douglas-channel
   length: 83 km
