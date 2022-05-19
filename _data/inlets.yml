@@ -170,6 +170,16 @@
   length: 83 km
   depth: 455 m
   sill: 200 m
+  runoff:
+    - >
+      Douglas Channel recieves freshwater inflow primarlily from streams and rivers leading into it (Johannessen et al. 2015).
+      Johannessen et al. (2015) estimate that the rainfed short rivers flowing into the channel provide more than the combined sources of the Kitimat and Kemano Rivers.
+      The Kitimat River was measured to provide 133 m<sup>3</sup> s<sup>-1</sup> from July 2013 to July 2014, and the Kemano River provides 52 m<sup>3</sup> s<sup>-1</sup>.
+  renewal:
+    - >
+      Johannessen et al. (2015) recorded the progression of deep water renewal up Douglas Channel over the course of mid-May into June.
+      They found that the upwelled water does not necessarily reach the surface in this process, but may instead remain somewhere between 53 m and 127 m.
+      This is still enough to pass over the sills present, and allow the water to replace the deepest water in the basins along the channel.
 
 - id: dean-channel
   depth: 550 m
