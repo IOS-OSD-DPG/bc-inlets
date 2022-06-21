@@ -4,12 +4,6 @@ BC Inlets
 This repo holds the website for the current version of the BC Inlets Program.
 Go [here](https://ios-osd-dpg.github.io/bc-inlets/) to view the site in its current form.
 
-Updating the Graphs
--------------------
-
-Updating the graphs shown on the site is fairly simple: just replace the file in `figures/` that you want to update.
-For example, if you want to update the raw temperature plot for Saanich Inlet, copy your new figure to `figures/saanich-inlet-temperature.png`.
-To update the averaged version, copy the new image to `figures/saanich-inlet-temperature-average.png`.
 
 Adding a New Inlet
 ------------------
