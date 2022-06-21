@@ -44,7 +44,7 @@ You should also ensure that the relevant annual averages and anomalies plots are
 Viewing Changes Locally
 -----------------------
 
-The site is generated using [Jekyll](https://jekyll.com), which is the default static site generater for [GitHub Pages](https://pages.github.com).
+The site is generated using [Jekyll](https://jekyllrb.com), which is the default static site generater for [GitHub Pages](https://pages.github.com).
 Because the site is generated using templating, opening `index.html` directly in a browser is not going to produce great results, and will look nothing like the finished product.
 In order to view your changes locally, you need to install Jekyll and then run `jekyll serve` from the root of the project (the same directory as this readme).
 This will process the template and compile the site, and allow you to view it.
